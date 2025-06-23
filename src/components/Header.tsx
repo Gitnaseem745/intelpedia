@@ -153,7 +153,7 @@ export const Header: FunctionComponent = () => {
 
   return (
     <>
-      <section className="flex items-center justify-between mt-8 md:mt-16 mb-12">
+      <section className="flex items-center justify-between mt-8 md:mt-10 mb-12">
         {/* Logo */}
         <Link href="/">
           <h1 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight">
@@ -162,7 +162,7 @@ export const Header: FunctionComponent = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex flex-1 justify-center z-[1000]">
+        <div className="hidden md:flex justify-center z-[1000]">
           <Menu setActive={setActive}>
             <MenuItem setActive={setActive} active={active} item="Blog" href="/">
               <div className="flex flex-col space-y-4 text-sm">
@@ -172,7 +172,7 @@ export const Header: FunctionComponent = () => {
               </div>
             </MenuItem>
             
-            <MenuItem setActive={setActive} active={active} item="Projects">
+            {/* <MenuItem setActive={setActive} active={active} item="Projects">
               <div className="text-sm grid grid-cols-2 gap-10 p-4">
                 <ProductItem
                   title="Next.js Blog"
@@ -199,7 +199,7 @@ export const Header: FunctionComponent = () => {
                   description="Productivity app for managing tasks and projects"
                 />
               </div>
-            </MenuItem>
+            </MenuItem> */}
             
             <MenuItem setActive={setActive} active={active} item="About" href="/about">
               <div className="flex flex-col space-y-4 text-sm">
@@ -208,11 +208,27 @@ export const Header: FunctionComponent = () => {
                 <HoveredLink href="/about/contact">Contact</HoveredLink>
               </div>
             </MenuItem>
+
+            <MenuItem setActive={setActive} active={active} item="Projects" href="/projects">
+              <div className="flex flex-col space-y-4 text-sm">
+                <HoveredLink href="/projects/nextjs-blog">Next.js Blog</HoveredLink>
+                <HoveredLink href="/projects/portfolio">Portfolio Site</HoveredLink>
+                <HoveredLink href="/projects/ecommerce">E-commerce App</HoveredLink>
+                <HoveredLink href="/projects/task-manager">Task Manager</HoveredLink>
+              </div>
+            </MenuItem>
           </Menu>
+
+          <button 
+            onClick={openSearch}
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          >
+            <Search size={20} className="text-black dark:text-white" />
+          </button>
         </div>
 
         {/* Search Icon and Mobile Menu Toggle */}
-        <div className="flex items-center space-x-2">
+        <div className="flex md:hidden items-center space-x-2">
           <button 
             onClick={openSearch}
             className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
