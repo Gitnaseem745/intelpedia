@@ -1,80 +1,281 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
-  @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 240 10% 3.9%;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
-      --card: 0 0% 100%;
-      --card-foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
-      --primary: 240 5.9% 10%;
-      --primary-foreground: 0 0% 98%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
 
-      --secondary: 240 4.8% 95.9%;
-      --secondary-foreground: 240 5.9% 10%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-      --muted: 240 4.8% 95.9%;
-      --muted-foreground: 240 3.8% 46.1%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-      --accent: 240 4.8% 95.9%;
-      --accent-foreground: 240 5.9% 10%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-      --border: 240 5.9% 90%;
-      --input: 240 5.9% 90%;
-      --ring: 240 10% 3.9%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
 
-      --radius: 0.5rem;
-    }
-
-    .dark {
-      --background: 240 10% 3.9%;
-      --foreground: 0 0% 98%;
-
-      --card: 240 10% 3.9%;
-      --card-foreground: 0 0% 98%;
-
-      --popover: 240 10% 3.9%;
-      --popover-foreground: 0 0% 98%;
-
-      --primary: 0 0% 98%;
-      --primary-foreground: 240 5.9% 10%;
-
-      --secondary: 240 3.7% 15.9%;
-      --secondary-foreground: 0 0% 98%;
-
-      --muted: 240 3.7% 15.9%;
-      --muted-foreground: 240 5% 64.9%;
-
-      --accent: 240 3.7% 15.9%;
-      --accent-foreground: 0 0% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 0 0% 98%;
-
-      --border: 240 3.7% 15.9%;
-      --input: 240 3.7% 15.9%;
-      --ring: 240 4.9% 83.9%;
-    }
+    --radius: 0.5rem;
   }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    .blog-content img {
-      @apply w-full;
-    }
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
   }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .blog-content img {
+    @apply w-full;
+  }
+}
+
+/* Ad-Specific Responsive Utilities */
+
+/* Sticky sidebar ads that don't interfere with content */
+.ad-sidebar-sticky {
+  position: sticky;
+  top: 6rem; /* Adjust based on header height */
+  height: fit-content;
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
+}
+
+/* Ad container spacing */
+.ad-container {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive ad visibility */
+.ad-mobile-only {
+  display: block;
+}
+
+.ad-desktop-only {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .ad-mobile-only {
+    display: none;
+  }
+  
+  .ad-desktop-only {
+    display: block;
+  }
+}
+
+/* Ad loading states */
+.ad-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 2s infinite;
+}
+
+.dark .ad-loading {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200% 100%;
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Ad error states */
+.ad-error {
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+}
+
+.dark .ad-error {
+  background-color: #7f1d1d;
+  border: 1px solid #991b1b;
+  color: #fca5a5;
+}
+
+/* Content protection - prevent ads from breaking layout */
+.content-with-ads {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-main {
+  flex: 1;
+}
+
+/* Ad spacing in content */
+.prose .ad-container {
+  margin: 2rem auto;
+  max-width: none;
+  width: 100%;
+}
+
+/* Prevent ads from affecting prose styles */
+.prose .ad-container > * {
+  all: revert;
+}
+
+/* Mobile ad adjustments */
+@media (max-width: 768px) {
+  .ad-container {
+    margin: 1rem 0;
+    padding: 0 1rem;
+  }
+  
+  /* Ensure mobile ads don't overflow */
+  .ad-mobile {
+    max-width: calc(100vw - 2rem);
+    overflow: hidden;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .ad-sidebar {
+    display: none; /* Hide sidebar ads on tablet */
+  }
+  
+  .ad-container {
+    margin: 1.5rem auto;
+    max-width: 728px; /* Standard banner width */
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1024px) {
+  .ad-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px; /* Sidebar - Content - Sidebar */
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .ad-sidebar {
+    width: 180px; /* Slightly smaller than grid column for spacing */
+  }
+  
+  .ad-content {
+    min-width: 0; /* Prevent content overflow */
+  }
+}
+
+/* Print styles - hide all ads when printing */
+@media print {
+  .ad-container,
+  .ad-sidebar,
+  [class*="ad-"] {
+    display: none !important;
+  }
+}
+
+/* Accessibility improvements */
+.ad-container:focus-within {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .ad-loading {
+    animation: none;
+    background: #f0f0f0;
+  }
+  
+  .dark .ad-loading {
+    background: #374151;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .ad-container {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Ad label styling for compliance */
+.ad-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.dark .ad-label {
+  color: #9ca3af;
+}
+
+/* Lazy loading placeholder */
+.ad-placeholder {
+  background-color: #f9fafb;
+  border: 1px dashed #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.dark .ad-placeholder {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #9ca3af;
+}
