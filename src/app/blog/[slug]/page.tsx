@@ -3,6 +3,14 @@ import { CommentSection } from "@/components/CommentSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { RelatedPosts } from "@/components/RelatedPosts";
+import { 
+  TopBannerAd, 
+  SidebarAd, 
+  InContentAd, 
+  MobileAd, 
+  SquareAd,
+  AdSlot 
+} from "@/components/AdSlot";
 import { config } from "@/config";
 import { signOgImageUrl } from "@/lib/og-image";
 import { wisp } from "@/lib/wisp";
@@ -74,11 +82,67 @@ const Page = async (props: { params: Promise<Params> }) => {
       />
       <div className="container mx-auto px-5">
         <Header />
-        <div className="max-w-prose mx-auto text-xl">
-          <BlogPostContent post={result.post} />
-          <RelatedPosts posts={posts} />
-          <CommentSection slug={slug} />
+        
+        {/* Ad-Optimized Layout Container */}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8">
+            
+            {/* Left Sidebar - Desktop Ads */}
+            <aside className="hidden lg:block lg:col-span-2">
+              <div className="sticky top-24 space-y-6">
+                <SidebarAd />
+                <SquareAd />
+              </div>
+            </aside>
+
+            {/* Main Content Area */}
+            <main className="lg:col-span-8">
+              {/* Top Banner Ad - Above Content */}
+              <div className="mb-8">
+                <TopBannerAd />
+              </div>
+
+              {/* Blog Content Container */}
+              <article className="prose prose-lg dark:prose-invert max-w-none">
+                <BlogPostContent post={result.post} />
+              </article>
+
+              {/* In-Content Ad - After Article */}
+              <div className="my-8">
+                <InContentAd />
+              </div>
+
+              {/* Related Posts */}
+              <div className="mt-12">
+                <RelatedPosts posts={posts} />
+              </div>
+
+              {/* Comments Section with Ad Above */}
+              <div className="mt-12">
+                {/* Ad Before Comments */}
+                <div className="mb-8">
+                  <AdSlot size="banner" position="pre-comments" />
+                </div>
+                
+                <CommentSection slug={slug} />
+              </div>
+            </main>
+
+            {/* Right Sidebar - Desktop Ads */}
+            <aside className="hidden lg:block lg:col-span-2">
+              <div className="sticky top-24 space-y-6">
+                <SidebarAd />
+                <AdSlot size="square" position="right-sidebar-small" className="h-[200px]" />
+              </div>
+            </aside>
+          </div>
+
+          {/* Mobile Bottom Ad - Only visible on mobile */}
+          <div className="lg:hidden mt-8">
+            <MobileAd />
+          </div>
         </div>
+        
         <Footer />
       </div>
     </>
