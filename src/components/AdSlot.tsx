@@ -97,7 +97,7 @@ export const useAdTracking = (adId: string) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             // Track ad visibility
-            console.log(`Ad ${adId} is visible`);
+            // console.log(`Ad ${adId} is visible`);
             // Here you can send analytics data
           }
         });
