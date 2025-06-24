@@ -4,7 +4,7 @@ import type { MetadataRoute } from "next";
 import urlJoin from "url-join";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const result = await wisp.getPosts(); // change with your actual function to fetch posts
+  const result = await wisp.getPosts();
   return [
     {
       url: urlJoin(config.baseUrl, "blog"),

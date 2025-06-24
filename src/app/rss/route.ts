@@ -21,8 +21,8 @@ export async function GET() {
   });
 
   const feed = new RSS({
-    title: config.blog.name,
-    description: config.blog.metadata.description,
+    title: config.blog.name || "Intelpedia",
+    description: config.blog.metadata.description || "Welcome to Intelpedia - Your source for technology insights and digital innovation.",
     site_url: baseUrl,
     feed_url: urlJoin(baseUrl, "/rss"),
     pubDate: new Date(),
