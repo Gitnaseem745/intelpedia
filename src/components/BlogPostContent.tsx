@@ -1,6 +1,7 @@
 "use client";
 import { GetPostResult } from "@/lib/wisp";
 import Link from "next/link";
+import Image from "next/image";
 import sanitize, { defaults } from "sanitize-html";
 
 export const PostContent = ({ content }: { content: string }) => {
@@ -59,29 +60,65 @@ export const PostContent = ({ content }: { content: string }) => {
 
 export const BlogPostContent = ({ post }: { post: GetPostResult["post"] }) => {
   if (!post) return null;
-  const { title, publishedAt, createdAt, content, tags } = post;
+  const { title, publishedAt, createdAt, content, tags, author } = post;
+  
   return (
     <div>
-      <div className="prose lg:prose-xl dark:prose-invert mx-auto lg:prose-h1:text-4xl mb-10 lg:mt-20 break-words">
-        <h1>{title}</h1>
-        <PostContent content={content} />
-
-        <div className="mt-10 text-sm">
-          {tags.map((tag) => (
-            <Link
-              key={tag.id}
-              href={`/tag/${tag.name}`}
-              className="mr-2 no-underline opacity-40 hover:opacity-70 text-white text-xs glass px-2 py-1 rounded-full border border-white/10"
-            >
-              #{tag.name}
-            </Link>
-          ))}
-        </div>
-        <div className="text-sm opacity-40 mt-4">
-          {Intl.DateTimeFormat("en-US").format(
-            new Date(publishedAt || createdAt)
+      <div className="prose lg:prose-xl dark:prose-invert mx-auto lg:prose-h1:text-4xl mb-10 break-words">
+        {/* Title */}
+        <h1 className="mb-6">{title}</h1>
+        
+        {/* Metadata Section - After Title */}
+        <div className="not-prose mb-8 pb-6 border-b border-border/50">
+          {/* Author and Date */}
+          <div className="flex items-center gap-4 mb-4 text-sm text-muted-foreground">
+            {author && (
+              <div className="flex items-center gap-2">
+                {author.image && (
+                  <Image 
+                    src={author.image} 
+                    alt={author.name || 'Author'} 
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 rounded-full object-cover"
+                  />
+                )}
+                <span className="font-medium text-foreground">
+                  {author.name || 'Anonymous'}
+                </span>
+              </div>
+            )}
+            <div className="flex items-center gap-1">
+              <span>•</span>
+              <time className="text-muted-foreground">
+                {Intl.DateTimeFormat("en-US", {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                }).format(new Date(publishedAt || createdAt))}
+              </time>
+            </div>
+          </div>
+          
+          {/* Tags */}
+          {tags.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {tags.map((tag) => (
+                <Link
+                  key={tag.id}
+                  href={`/tag/${tag.name}`}
+                  className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary/80 hover:bg-secondary text-secondary-foreground transition-colors duration-200 no-underline"
+                >
+                  <span className="mr-1">#</span>
+                  {tag.name.replaceAll('-', ' ')}
+                </Link>
+              ))}
+            </div>
           )}
         </div>
+
+        {/* Content */}
+        <PostContent content={content} />
       </div>
     </div>
   );

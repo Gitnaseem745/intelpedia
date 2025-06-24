@@ -15,7 +15,7 @@ export const BlogPostPreview: FunctionComponent<{
                 <div className="relative card-border border overflow-hidden rounded-2xl flex flex-col bg-white hover:bg-neutral-500/5 dark:bg-transparent dark:hover:bg-neutral-900/30 ease-linear transition-all hover:shadow-lg hover:scale-[1.01]">
                     <div className="p-4 flex justify-center relative">
                         <div className="w-full h-48 rounded-xl gradient-border inner-glow overflow-hidden relative">
-                            <Link href={`blog/${post?.slug}`} className="absolute inset-0">
+                            <Link href={`/blog/${post?.slug}`} className="absolute inset-0">
                                 <Image alt={post.title} src={post?.image || "/images/placeholder.webp"} fill  className="w-full h-full" />
                             </Link>
                         </div>
