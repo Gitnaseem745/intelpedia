@@ -1,12 +1,9 @@
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { config } from "@/config";
 import { signOgImageUrl } from "@/lib/og-image";
 import Markdown from "react-markdown";
 
 const content = `# About Me
 
-![Naseem](https://your-image-link.com/your-image.jpg)
 
 Hey, I'm Naseem – the creator behind **Intelpedia**, a digital space where curiosity meets clarity.
 
@@ -35,24 +32,33 @@ Thanks for stopping by.
 Naseem**
 
 📍 _Founder, Intelpedia Blog_  
-📧 _Email: contact@intelpedia.in_  
-🌐 _[intelpedia.in](https://intelpedia.in)_  
+📧 _Email: contact@intelpedia.tech_  
+🌐 _[intelpedia.tech](https://intelpedia.tech)_  
 `;
 
 export async function generateMetadata() {
   return {
-    title: "About Me",
-    description: "Learn more about Samantha and her travel adventures",
+    title: "About Me - AI Expert & Creator | Intelpedia",
+    description: "Meet Naseem, AI enthusiast and creator behind Intelpedia. Specializing in AI tools, prompting techniques, image generation with ChatGPT, Midjourney, and Stable Diffusion.",
+    keywords: ["AI expert", "AI enthusiast", "ChatGPT expert", "Midjourney", "Stable Diffusion", "AI prompting", "AI image generation", "artificial intelligence"],
     openGraph: {
-      title: "About Me",
-      description: "Learn more about Samantha and her travel adventures",
+      title: "About Me - AI Expert & Creator",
+      description: "Meet Naseem, AI enthusiast and creator behind Intelpedia. Specializing in AI tools, prompting techniques, and image generation.",
+      url: `${config.baseUrl}/about`,
+      siteName: "Intelpedia",
+      type: "profile",
       images: [
         signOgImageUrl({
-          title: "Samantha",
+          title: "Naseem - AI Expert",
           label: "About Me",
           brand: config.blog.name,
         }),
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "About Me - AI Expert & Creator",
+      description: "Meet Naseem, AI enthusiast and creator behind Intelpedia. Specializing in AI tools and prompting techniques.",
     },
   };
 }
@@ -60,11 +66,9 @@ export async function generateMetadata() {
 const Page = async () => {
   return (
     <div className="container mx-auto px-5">
-      <Header />
       <div className="prose lg:prose-lg dark:prose-invert m-auto mt-20 mb-10 blog-content">
         <Markdown>{content}</Markdown>
       </div>
-      <Footer />
     </div>
   );
 };
