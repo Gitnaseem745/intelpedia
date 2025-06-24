@@ -2,7 +2,7 @@ import { config } from "@/config";
 import type { MetadataRoute } from "next";
 import urlJoin from "url-join";
 
-const staticPaths = ["about"];
+const staticPaths = ["about", "privacy-policy", "terms-of-service"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = staticPaths.map((path) => ({
