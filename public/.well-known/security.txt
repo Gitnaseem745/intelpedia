@@ -1,0 +1,5 @@
+Contact: mailto:contact@intelpedia.tech
+Expires: 2026-12-31T23:59:59.000Z
+Encryption: https://intelpedia.tech/.well-known/pgp-key.txt
+Preferred-Languages: en
+Canonical: https://intelpedia.tech/.well-known/security.txt

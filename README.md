@@ -22,7 +22,10 @@ Wisp is a modern CMS for adding blogs to websites. It features an intuitive, med
 
 ## Features
 
+- **SEO-Optimized Homepage**: Comprehensive homepage with structured data, meta tags, and category navigation
 - Beautiful blog starter kit with server rendering using Next.js 15 Server Components
+- **Category-Based Navigation**: Featured tag categories with icons and descriptions
+- **Enhanced SEO**: Complete meta tags, structured data (Schema.org), robots.txt, and sitemap
 - Responsive layout for mobile devices
 - Filter blog posts by tags
 - About page
