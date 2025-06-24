@@ -8,12 +8,24 @@ import { Button } from "./ui/button";
 
 export const Footer: FunctionComponent = () => {
   return (
-    <section className="mt-8 md:mt-16 mb-12">
-      <div className="flex items-center justify-between">
+    <section className="container mt-8 md:mt-16 mx-auto mb-6">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="text-sm text-muted-foreground">
           © {config.blog.copyright} {new Date().getFullYear()}
         </div>
-        <div>
+        
+        {/* Legal Links */}
+        <div className="flex items-center gap-4 text-sm">
+          <Link href="/privacy-policy" className="text-muted-foreground hover:text-foreground transition-colors">
+            Privacy Policy
+          </Link>
+          <span className="text-muted-foreground">•</span>
+          <Link href="/terms-of-service" className="text-muted-foreground hover:text-foreground transition-colors">
+            Terms of Service
+          </Link>
+        </div>
+        
+        <div className="flex items-center">
           <Link href="/rss">
             <Button variant="ghost" className="p-2">
               <Rss className="w-4 h-4" />

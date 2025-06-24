@@ -153,7 +153,7 @@ export const Header: FunctionComponent = () => {
 
   return (
     <>
-      <section className="flex items-center justify-between mt-8 md:mt-10 mb-12">
+      <section className="container flex items-center justify-between mt-6 mb-12 mx-auto">
         {/* Logo */}
         <Link href="/">
           <h1 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight">
@@ -164,59 +164,19 @@ export const Header: FunctionComponent = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-center z-[1000]">
           <Menu setActive={setActive}>
+            <MenuItem setActive={setActive} active={active} item="Home" href="/" />
+            
             <MenuItem setActive={setActive} active={active} item="Blog" href="/">
               <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="/blog/latest">Latest Posts</HoveredLink>
-                <HoveredLink href="/blog/featured">Featured</HoveredLink>
-                <HoveredLink href="/blog/archive">Archive</HoveredLink>
-              </div>
-            </MenuItem>
-            
-            {/* <MenuItem setActive={setActive} active={active} item="Projects">
-              <div className="text-sm grid grid-cols-2 gap-10 p-4">
-                <ProductItem
-                  title="Next.js Blog"
-                  href="/projects/nextjs-blog"
-                  src="/images/tailwind.webp"
-                  description="A modern blog built with Next.js and Tailwind CSS"
-                />
-                <ProductItem
-                  title="Portfolio Site"
-                  href="/projects/portfolio"
-                  src="/images/portfolio.jpg"
-                  description="Personal portfolio showcasing my work and skills"
-                />
-                <ProductItem
-                  title="E-commerce App"
-                  href="/projects/ecommerce"
-                  src="/images/e-commerce.jpg"
-                  description="Full-stack e-commerce solution with payment integration"
-                />
-                <ProductItem
-                  title="Task Manager"
-                  href="/projects/task-manager"
-                  src="/images/taskmanager.jpg"
-                  description="Productivity app for managing tasks and projects"
-                />
-              </div>
-            </MenuItem> */}
-            
-            <MenuItem setActive={setActive} active={active} item="About" href="/about">
-              <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="/about">About Me</HoveredLink>
-                <HoveredLink href="/about/experience">Experience</HoveredLink>
-                <HoveredLink href="/about/contact">Contact</HoveredLink>
+                <HoveredLink href="/#latest-posts">Latest Posts</HoveredLink>
+                <HoveredLink href="/tag">Browse by Tags</HoveredLink>
+                <HoveredLink href="/rss">RSS Feed</HoveredLink>
               </div>
             </MenuItem>
 
-            <MenuItem setActive={setActive} active={active} item="Projects" href="/projects">
-              <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="/projects/nextjs-blog">Next.js Blog</HoveredLink>
-                <HoveredLink href="/projects/portfolio">Portfolio Site</HoveredLink>
-                <HoveredLink href="/projects/ecommerce">E-commerce App</HoveredLink>
-                <HoveredLink href="/projects/task-manager">Task Manager</HoveredLink>
-              </div>
-            </MenuItem>
+            <MenuItem setActive={setActive} active={active} item="Tags" href="/tag" />
+            
+            <MenuItem setActive={setActive} active={active} item="About" href="/about" />
           </Menu>
 
           <button 
@@ -289,6 +249,13 @@ export const Header: FunctionComponent = () => {
 
               {/* Sidebar Content */}
               <div className="p-6 space-y-6">
+                {/* Home */}
+                <div>
+                  <Link href="/" className="block py-3 text-lg font-medium text-black dark:text-white hover:text-primary transition-colors" onClick={toggleMobileMenu}>
+                    Home
+                  </Link>
+                </div>
+
                 {/* Blog Section */}
                 <div>
                   <h3 className="text-lg font-medium text-black dark:text-white mb-3">Blog</h3>
@@ -296,60 +263,27 @@ export const Header: FunctionComponent = () => {
                     <Link href="/" className="block py-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" onClick={toggleMobileMenu}>
                       Latest Posts
                     </Link>
-                    <Link href="/blog/featured" className="block py-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" onClick={toggleMobileMenu}>
-                      Featured
+                    <Link href="/tag" className="block py-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" onClick={toggleMobileMenu}>
+                      Browse by Tags
                     </Link>
-                    <Link href="/blog/archive" className="block py-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" onClick={toggleMobileMenu}>
-                      Archive
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Projects Section */}
-                <div>
-                  <h3 className="text-lg font-medium text-black dark:text-white mb-3">Projects</h3>
-                  <div className="space-y-3 ml-4">
-                    <Link href="/projects/nextjs-blog" className="block" onClick={toggleMobileMenu}>
-                      <div className="py-2">
-                        <h4 className="font-medium text-black dark:text-white">Next.js Blog</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">Modern blog with Next.js</p>
-                      </div>
-                    </Link>
-                    <Link href="/projects/portfolio" className="block" onClick={toggleMobileMenu}>
-                      <div className="py-2">
-                        <h4 className="font-medium text-black dark:text-white">Portfolio Site</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">Personal showcase</p>
-                      </div>
-                    </Link>
-                    <Link href="/projects/ecommerce" className="block" onClick={toggleMobileMenu}>
-                      <div className="py-2">
-                        <h4 className="font-medium text-black dark:text-white">E-commerce App</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">Full-stack solution</p>
-                      </div>
-                    </Link>
-                    <Link href="/projects/task-manager" className="block" onClick={toggleMobileMenu}>
-                      <div className="py-2">
-                        <h4 className="font-medium text-black dark:text-white">Task Manager</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">Productivity app</p>
-                      </div>
+                    <Link href="/rss" className="block py-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" onClick={toggleMobileMenu}>
+                      RSS Feed
                     </Link>
                   </div>
                 </div>
 
-                {/* About Section */}
+                {/* Tags */}
                 <div>
-                  <h3 className="text-lg font-medium text-black dark:text-white mb-3">About</h3>
-                  <div className="space-y-2 ml-4">
-                    <Link href="/about" className="block py-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" onClick={toggleMobileMenu}>
-                      About Me
-                    </Link>
-                    <Link href="/about/experience" className="block py-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" onClick={toggleMobileMenu}>
-                      Experience
-                    </Link>
-                    <Link href="/about/contact" className="block py-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" onClick={toggleMobileMenu}>
-                      Contact
-                    </Link>
-                  </div>
+                  <Link href="/tag" className="block py-3 text-lg font-medium text-black dark:text-white hover:text-primary transition-colors" onClick={toggleMobileMenu}>
+                    All Tags
+                  </Link>
+                </div>
+
+                {/* About */}
+                <div>
+                  <Link href="/about" className="block py-3 text-lg font-medium text-black dark:text-white hover:text-primary transition-colors" onClick={toggleMobileMenu}>
+                    About
+                  </Link>
                 </div>
               </div>
             </motion.div>
