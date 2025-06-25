@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/lib/utils";
+import { cn, normalizeTagSlug, tagSlugToDisplayName } from "@/lib/utils";
 import { GetPostsResult } from "@/lib/wisp";
 import { formatDate } from "date-fns";
 import Image from "next/image";
@@ -29,8 +29,8 @@ export const BlogPostPreview: FunctionComponent<{
                     </div>
                     <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/30 to-transparent" />
                     <div className="p-4">
-                        <Link href={`/tag/${post?.tags[0]?.name}`} className="inline-block px-3 py-1 glass text-indigo-600 dark:text-indigo-300 rounded-full text-xs font-medium mb-3 border border-indigo-400/30">
-                            {post.tags[0].name.charAt(0).toLocaleUpperCase() + post.tags[0].name.slice(1) || "Database"}
+                        <Link href={`/tag/${normalizeTagSlug(post?.tags[0]?.name)}`} className="inline-block px-3 py-1 glass text-indigo-600 dark:text-indigo-300 rounded-full text-xs font-medium mb-3 border border-indigo-400/30">
+                            {tagSlugToDisplayName(post.tags[0].name) || "Database"}
                         </Link>
                         <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2 line-clamp-2">{post?.title}</h3>
                         <p className="text-gray-600 dark:text-white/70 mb-4 leading-relaxed text-xs line-clamp-2">

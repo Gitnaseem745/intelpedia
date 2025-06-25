@@ -1,4 +1,5 @@
 import { ArrowRight, BookOpen, Code, Database, Lightbulb, Rocket, Search, TrendingUp } from "@/lib/icons";
+import { normalizeTagSlug, tagSlugToDisplayName } from "@/lib/utils";
 import Link from "next/link";
 
 interface TagCardProps {
@@ -12,11 +13,14 @@ interface TagCardProps {
 export const TagCard: React.FC<TagCardProps> = ({ tag, index = 0 }) => {
   const icons = [Code, Database, Rocket, TrendingUp, Search, Lightbulb];
   const IconComponent = icons[index % icons.length] || BookOpen;
-  const tagName = tag.name.replaceAll('-', ' ');
+  
+  // For display, use the tag name as stored but make it readable
+  const tagName = tagSlugToDisplayName(tag.name);
+  const tagSlug = normalizeTagSlug(tag.name);
   
   return (
     <Link 
-      href={`/tag/${tag.name.toLowerCase()}`}
+      href={`/tag/${tagSlug}`}
       className="group p-6 bg-card rounded-xl border hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
     >
       <div className="flex items-center mb-4">

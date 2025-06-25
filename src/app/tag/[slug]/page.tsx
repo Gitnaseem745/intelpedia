@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { config } from "@/config";
 import { signOgImageUrl } from "@/lib/og-image";
 import { wisp } from "@/lib/wisp";
+import { tagSlugToDisplayName, getTagVariations } from "@/lib/utils";
 import { ArrowLeft, Hash, BookOpen } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -20,7 +21,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const params = await props.params;
   const { slug } = params;
-  const tagName = slug.replaceAll('-', ' ');
+  const tagName = tagSlugToDisplayName(slug);
   
   return {
     title: `${tagName} - AI Articles & Insights | Intelpedia`,
@@ -60,10 +61,22 @@ const Page = async (
   const { slug } = params;
 
   const page = searchParams.page ? parseInt(searchParams.page as string) : 1;
-  const result = await wisp.getPosts({ limit: 6, tags: [slug], page });
   
-  const tagName = slug.replaceAll('-', ' ');
-  const totalPosts = result.pagination?.totalPages || 0;
+  // Try to get posts using different tag variations
+  let result = await wisp.getPosts({ limit: 6, tags: [slug], page });
+  
+  // If no posts found, try with different tag variations based on your DB format
+  if (result.posts.length === 0) {
+    const tagVariations = getTagVariations(slug);
+    
+    for (const tagVariation of tagVariations) {
+      result = await wisp.getPosts({ limit: 6, tags: [tagVariation], page });
+      if (result.posts.length > 0) break;
+    }
+  }
+  
+  const tagName = tagSlugToDisplayName(slug);
+  const totalPosts = result.posts.length;
   
   return (
     <div className="min-h-screen">
@@ -103,7 +116,7 @@ const Page = async (
           {/* Tag Badge */}
           <Badge variant="outline" className="px-4 py-2 text-base">
             <Hash className="w-4 h-4 mr-2" />
-            {tagName}
+            {slug}
           </Badge>
         </div>
 

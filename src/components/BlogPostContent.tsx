@@ -3,6 +3,7 @@ import { GetPostResult } from "@/lib/wisp";
 import Link from "next/link";
 import Image from "next/image";
 import sanitize, { defaults } from "sanitize-html";
+import { normalizeTagSlug } from "@/lib/utils";
 
 export const PostContent = ({ content }: { content: string }) => {
   // Remove "Powered by wisp" branding from content
@@ -106,11 +107,11 @@ export const BlogPostContent = ({ post }: { post: GetPostResult["post"] }) => {
               {tags.map((tag) => (
                 <Link
                   key={tag.id}
-                  href={`/tag/${tag.name}`}
+                  href={`/tag/${normalizeTagSlug(tag.name)}`}
                   className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary/80 hover:bg-secondary text-secondary-foreground transition-colors duration-200 no-underline"
                 >
                   <span className="mr-1">#</span>
-                  {tag.name.replaceAll('-', ' ')}
+                  {tag.name}
                 </Link>
               ))}
             </div>
