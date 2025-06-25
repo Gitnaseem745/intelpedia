@@ -1,11 +1,11 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <sitemap>
-        <loc>https://intelpedia.tech/static/sitemap.xml</loc>
+        <loc>https://www.intelpedia.tech/static/sitemap.xml</loc>
     </sitemap>
     <sitemap>
-        <loc>https://intelpedia.tech/blog/sitemap.xml</loc>
+        <loc>https://www.intelpedia.tech/blog/sitemap.xml</loc>
     </sitemap>
     <sitemap>
-        <loc>https://intelpedia.tech/tag/sitemap.xml</loc>
+        <loc>https://www.intelpedia.tech/tag/sitemap.xml</loc>
     </sitemap>
 </sitemapindex>

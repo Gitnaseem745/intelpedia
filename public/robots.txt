@@ -2,10 +2,10 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://intelpedia.tech/sitemap.xml
-Sitemap: https://intelpedia.tech/blog/sitemap.xml
-Sitemap: https://intelpedia.tech/tag/sitemap.xml
-Sitemap: https://intelpedia.tech/static/sitemap.xml
+Sitemap: https://www.intelpedia.tech/sitemap.xml
+Sitemap: https://www.intelpedia.tech/blog/sitemap.xml
+Sitemap: https://www.intelpedia.tech/tag/sitemap.xml
+Sitemap: https://www.intelpedia.tech/static/sitemap.xml
 
 # Block crawling of admin or private pages
 Disallow: /admin/
