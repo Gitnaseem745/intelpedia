@@ -27,7 +27,7 @@ export const Footer: FunctionComponent = () => {
         
         <div className="flex items-center">
           <Link href="/rss">
-            <Button variant="ghost" className="p-2">
+            <Button variant="ghost" role="button" aria-label="Rss Feed" className="p-2">
               <Rss className="w-4 h-4" />
             </Button>
           </Link>
