@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Code, Database, Lightbulb, Rocket, Search, TrendingUp } from "lucide-react";
+import { ArrowRight, BookOpen, Code, Database, Lightbulb, Rocket, Search, TrendingUp } from "@/lib/icons";
 import Link from "next/link";
 
 interface TagCardProps {

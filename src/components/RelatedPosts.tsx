@@ -27,7 +27,9 @@ export const RelatedPosts: FunctionComponent<{
                   src={post.image || "/images/placeholder.png"}
                   alt={post.title}
                   fill
-                  className="h -full min-h-full min-w-full object-cover object-center"
+                  className="h-full min-h-full min-w-full object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="lazy"
                 />
               </AspectRatio>
             </Link>
