@@ -1,0 +1,37 @@
+/* Critical CSS for above-the-fold content - inline this for best performance */
+.hero-section {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+}
