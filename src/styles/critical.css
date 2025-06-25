@@ -26,13 +26,7 @@
   contain: layout style;
 }
 
-.tagline-text {
-  text-rendering: optimizeSpeed;
-  contain: layout style;
-  font-feature-settings: normal;
-  content-visibility: auto;
-  contain-intrinsic-size: 0 4em;
-}
+
 
 .button-group {
   display: flex;

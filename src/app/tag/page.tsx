@@ -38,7 +38,7 @@ export default async function Page() {
     <div className="container mx-auto px-5">      
       <div className="mt-20 mb-12 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold mb-4">Explore All Topics</h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto tagline-text">
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Discover articles organized by topics. From web development to AI.
         </p>
       </div>

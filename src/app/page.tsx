@@ -133,7 +133,7 @@ const Page = async (
             </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
               Where Curiosity Meets Clarity
-            </h1>            <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed tagline-text">
+            </h1>            <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed">
               Master AI tools, image generation, prompting techniques, and AI news. Your comprehensive guide to artificial intelligence.
             </p>
             
