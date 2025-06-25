@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "../styles/critical.css";
 import { Providers } from "./providers";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -79,8 +80,8 @@ export default function RootLayout({
                 {/* Performance optimizations */}
                 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-                {/* Preload critical resources */}
-                <link rel="modulepreload" href="/_next/static/chunks/main.js" />
+                {/* Preload critical CSS */}
+                <link rel="preload" href="/fonts/Inter-Regular.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
                 
                 {/* Additional favicon and icon links for better browser support */}

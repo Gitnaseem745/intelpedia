@@ -133,15 +133,8 @@ const Page = async (
             </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
               Where Curiosity Meets Clarity
-            </h1>
-            
-            <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              Master the future with comprehensive guides on{" "}
-              <span className="text-primary font-semibold">AI tools</span>, 
-              <span className="text-primary font-semibold"> AI image generation</span>, 
-              <span className="text-primary font-semibold"> prompting techniques</span>, and{" "}
-              <span className="text-primary font-semibold"> AI news</span>. 
-              Your go-to resource for artificial intelligence insights and tutorials.
+            </h1>            <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed tagline-text">
+              Master AI tools, image generation, prompting techniques, and AI news. Your comprehensive guide to artificial intelligence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -164,9 +157,8 @@ const Page = async (
         {/* Featured Categories */}
         <section className="container mx-auto px-5 py-16 bg-muted/30">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Explore by Tags</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Dive deep into your areas of interest. From cutting-edge AI to practical development tutorials.
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Explore by Tags</h2>            <p className="text-lg text-muted-foreground max-w-2xl mx-auto tagline-text">
+              Dive deep into your areas of interest. AI to development tutorials.
             </p>
           </div>            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {featuredTags.map((tag, index) => (
@@ -188,9 +180,8 @@ const Page = async (
         {/* Latest Posts Section */}
         <section id="latest-posts" className="container mx-auto px-5 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Latest Articles</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Stay updated with our newest content covering the latest trends and insights in AI technology.
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Latest Articles</h2>            <p className="text-lg text-muted-foreground max-w-2xl mx-auto tagline-text">
+              Stay updated with our newest AI technology content.
             </p>
           </div>
           
@@ -201,9 +192,8 @@ const Page = async (
         {/* Newsletter/CTA Section */}
         <section className="container mx-auto px-5 py-16 bg-muted/30">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Stay in the Loop</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Join our community of AI enthusiasts and get the latest insights delivered straight to your inbox.
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Stay in the Loop</h2>            <p className="text-lg text-muted-foreground mb-8 tagline-text">
+              Join our AI community and get insights delivered to your inbox.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">

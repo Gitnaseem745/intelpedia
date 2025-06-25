@@ -26,9 +26,8 @@ export const TagCard: React.FC<TagCardProps> = ({ tag, index = 0 }) => {
         <h3 className="text-xl font-semibold capitalize">
           {tagName}
         </h3>
-      </div>
-      <p className="text-muted-foreground mb-4">
-        Explore our latest insights and tutorials on {tagName}.
+      </div>      <p className="text-muted-foreground mb-4 tagline-text">
+        Explore {tagName} insights and tutorials.
       </p>
       <div className="flex items-center text-primary font-medium group-hover:gap-2 transition-all">
         View Posts
