@@ -16,7 +16,14 @@ export const BlogPostPreview: FunctionComponent<{
                     <div className="p-4 flex justify-center relative">
                         <div className="w-full h-48 rounded-xl gradient-border inner-glow overflow-hidden relative">
                             <Link href={`/blog/${post?.slug}`} className="absolute inset-0">
-                                <Image alt={post.title} src={post?.image || "/images/placeholder.webp"} fill  className="w-full h-full" />
+                                <Image 
+                                    alt={post.title} 
+                                    src={post?.image || "/images/placeholder.webp"} 
+                                    fill 
+                                    className="w-full h-full object-cover" 
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    priority={false}
+                                />
                             </Link>
                         </div>
                     </div>
@@ -31,7 +38,7 @@ export const BlogPostPreview: FunctionComponent<{
                         </p>
                         <div className="flex justify-between items-center">
                             <Link href={`/blog/${post?.slug}`} className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition flex items-center text-xs font-medium glass px-3 py-1.5 rounded-lg border border-indigo-400/30">
-                                Read More
+                                Read Full
                                 <svg className="w-3 h-3 ml-1" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>
                             </Link>
                             <span className="text-gray-500 dark:text-white/50 text-xs glass px-2 py-1 rounded-full border border-gray-200 dark:border-white/10">
