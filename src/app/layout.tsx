@@ -52,6 +52,20 @@ export const metadata: Metadata = {
     verification: {
         google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
     },
+    icons: {
+        icon: [
+            { url: '/favicons/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+            { url: '/favicons/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+            { url: '/favicons/favicon.ico', sizes: 'any' }
+        ],
+        apple: [
+            { url: '/favicons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+        ],
+        other: [
+            { rel: 'manifest', url: '/favicons/site.webmanifest' }
+        ]
+    },
+    manifest: '/favicons/site.webmanifest',
 };
 
 export default function RootLayout({
@@ -68,6 +82,18 @@ export default function RootLayout({
                 {/* Preload critical resources */}
                 <link rel="modulepreload" href="/_next/static/chunks/main.js" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+                
+                {/* Additional favicon and icon links for better browser support */}
+                <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+                <link rel="manifest" href="/favicons/site.webmanifest" />
+                
+                {/* Additional meta tags for mobile browsers */}
+                <meta name="theme-color" content="#ffffff" />
+                <meta name="msapplication-TileColor" content="#ffffff" />
+                <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
             </head>
             <body
                 className={cn(
