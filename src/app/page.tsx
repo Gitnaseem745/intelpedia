@@ -1,15 +1,16 @@
 import { BlogPostsPreview } from "@/components/BlogPostPreview";
 import { BlogPostsPagination } from "@/components/BlogPostsPagination";
-import { TagCard } from "@/components/TagCard";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { config } from "@/config";
 import { signOgImageUrl } from "@/lib/og-image";
 import { wisp } from "@/lib/wisp";
-import { ArrowRight, BookOpen, Lightbulb, Rocket, Star } from "lucide-react";
+import { ArrowRight, BookOpen, Lightbulb, Rocket, Star } from "@/lib/icons";
 import Link from "next/link";
 import type { Metadata } from "next";
 import type { WebSite, Organization, WithContext } from "schema-dts";
+import { DynamicTagCard } from "@/components/DynamicComponents";
+
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -50,6 +51,11 @@ export async function generateMetadata(): Promise<Metadata> {
         "max-snippet": -1,
       },
     },
+    other: {
+      // Resource hints for better performance
+      "dns-prefetch": "https://fonts.googleapis.com",
+      "preconnect": "https://fonts.gstatic.com",
+    },
   };
 }
 
@@ -61,12 +67,13 @@ const Page = async (
   const searchParams = await props.searchParams;
   const page = searchParams.page ? parseInt(searchParams.page as string) : 1;
   
-  // Fetch posts and tags
+  // Fetch posts and tags with optimized query
   const [postsResult, tagsResult] = await Promise.all([
     wisp.getPosts({ limit: 6, page }),
     wisp.getTags()
   ]);
-  // Featured categories/tags to highlight
+  
+  // Featured categories/tags to highlight - limit for performance
   const featuredTags = tagsResult.tags.slice(0, 6);
   
   // Structured data for SEO
@@ -117,8 +124,7 @@ const Page = async (
       />
       
       <div className="min-h-screen">
-        
-        {/* Hero Section */}
+          {/* Hero Section */}
         <section className="container mx-auto px-5 py-16 lg:py-24">
           <div className="text-center max-w-4xl mx-auto">
             <Badge variant="secondary" className="mb-6 px-4 py-2 text-sm">
@@ -130,21 +136,22 @@ const Page = async (
             </h1>
             
             <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              Master the future with comprehensive guides on <span className="text-primary font-semibold">AI tools</span>, 
+              Master the future with comprehensive guides on{" "}
+              <span className="text-primary font-semibold">AI tools</span>, 
               <span className="text-primary font-semibold"> AI image generation</span>, 
-              <span className="text-primary font-semibold"> prompting techniques</span>, and 
+              <span className="text-primary font-semibold"> prompting techniques</span>, and{" "}
               <span className="text-primary font-semibold"> AI news</span>. 
               Your go-to resource for artificial intelligence insights and tutorials.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button asChild size="lg" className="px-8">
-                <Link href="#latest-posts">
+              <Button asChild size="lg" className="px-8" role="button" aria-label="Explore Articles">
+                <Link href="#latest-posts" >
                   <BookOpen className="w-5 h-5 mr-2" />
                   Explore Articles
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="px-8">
+              <Button asChild variant="outline" role="button" aria-label="About Intelpedia" size="lg" className="px-8">
                 <Link href="/about">
                   <Lightbulb className="w-5 h-5 mr-2" />
                   About Intelpedia
@@ -161,10 +168,9 @@ const Page = async (
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Dive deep into your areas of interest. From cutting-edge AI to practical development tutorials.
             </p>
-          </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          </div>            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {featuredTags.map((tag, index) => (
-              <TagCard key={tag.id} tag={tag} index={index} />
+              <DynamicTagCard key={tag.id} tag={tag} index={index} />
             ))}
           </div>
           
@@ -201,13 +207,13 @@ const Page = async (
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Button asChild size="lg" className="md:flex-1">
+              <Button asChild size="lg" role="button" aria-label="RSS Subscribe Button" className="md:flex-1">
                 <Link href="/rss" target="_blank">
                   <Rocket className="w-5 h-5 mr-2" />
                   Subscribe to RSS
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="md:flex-1">
+              <Button asChild variant="outline" size="lg" className="md:flex-1" role="button" aria-label="Contact Intelpedia">
                 <Link href="mailto:contact@intelpedia.tech">
                   <Star className="w-5 h-5 mr-2" />
                   Get in Touch

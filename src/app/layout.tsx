@@ -7,8 +7,14 @@ import { Providers } from "./providers";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { DynamicWebVitals } from "@/components/DynamicComponents";
 
-const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const fontSans = Inter({ 
+  subsets: ["latin"], 
+  variable: "--font-sans",
+  display: 'swap', // Improve font loading performance
+  preload: true,
+});
 
 export const metadata: Metadata = {
     metadataBase: new URL(config.baseUrl),
@@ -55,6 +61,14 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
+            <head>
+                {/* Performance optimizations */}
+                <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+                {/* Preload critical resources */}
+                <link rel="modulepreload" href="/_next/static/chunks/main.js" />
+                <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+            </head>
             <body
                 className={cn(
                     "min-h-screen bg-background font-sans antialiased w-full m-auto",
@@ -68,6 +82,7 @@ export default function RootLayout({
                         <Footer />
                     </main>
                 </Providers>
+                {process.env.NODE_ENV === 'production' && <DynamicWebVitals />}
             </body>
             {process.env.NEXT_PUBLIC_GA_ID && (
                 <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />

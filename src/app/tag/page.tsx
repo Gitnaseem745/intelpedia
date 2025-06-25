@@ -1,4 +1,4 @@
-import { TagCard } from "@/components/TagCard";
+import { DynamicTagCard } from "@/components/DynamicComponents";
 import { config } from "@/config";
 import { signOgImageUrl } from "@/lib/og-image";
 import { wisp } from "@/lib/wisp";
@@ -45,7 +45,7 @@ export default async function Page() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-20">
         {result.tags.map((tag, index) => (
-          <TagCard key={tag.id} tag={tag} index={index} />
+          <DynamicTagCard key={tag.id} tag={tag} index={index} />
         ))}
       </div>
     </div>
