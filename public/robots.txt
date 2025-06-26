@@ -16,6 +16,8 @@ Disallow: /_next/
 Allow: /blog/
 Allow: /tag/
 Allow: /about/
+Allow: /privacy-policy/
+Allow: /terms-of-service/
 
 # Crawl delay (optional)
 Crawl-delay: 1

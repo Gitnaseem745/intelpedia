@@ -9,12 +9,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: urlJoin(config.baseUrl, "blog"),
       lastModified: new Date(),
+      changeFrequency: "daily" as const,
       priority: 0.8,
     },
     ...result.posts.map((post) => {
       return {
         url: urlJoin(config.baseUrl, "blog", post.slug),
         lastModified: new Date(post.updatedAt),
+        changeFrequency: "daily" as const,
         priority: 0.8,
       };
     }),

@@ -10,6 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: urlJoin(config.baseUrl, "tag"),
       lastModified: new Date(),
+      changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     ...result.tags.map((tag) => {
@@ -17,6 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       return {
         url: urlJoin(config.baseUrl, "tag", tagSlug),
         lastModified: new Date(),
+        changeFrequency: "weekly" as const,
         priority: 0.8,
       };
     }),
