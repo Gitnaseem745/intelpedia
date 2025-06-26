@@ -6,6 +6,15 @@ export const generateBannerImage = (
   { title, label, brand }: OpenGraphImageParams,
   fonts: FontMap
 ) => {
+  // Get available fonts or use system fallbacks
+  const availableFonts = [];
+  if (fonts["inter-semibold"]) {
+    availableFonts.push(fonts["inter-semibold"]);
+  }
+  if (fonts["inter-regular"]) {
+    availableFonts.push(fonts["inter-regular"]);
+  }
+
   return new ImageResponse(
     (
       <div
@@ -16,7 +25,7 @@ export const generateBannerImage = (
           flexDirection: "column",
           backgroundColor: "#fcf6f1",
           justifyContent: "space-between",
-          fontFamily: "Inter-SemiBold",
+          fontFamily: availableFonts.length > 0 ? "Inter-SemiBold" : "system-ui, -apple-system, sans-serif",
           color: "#212121",
           padding: "40px",
         }}
@@ -51,7 +60,7 @@ export const generateBannerImage = (
               padding: "0 0 100px 0",
               letterSpacing: "-0.025em",
               color: "#212121",
-              fontFamily: "Inter-SemiBold",
+              fontFamily: availableFonts.length > 0 ? "Inter-SemiBold" : "system-ui, -apple-system, sans-serif",
               lineClamp: 4,
             }}
           >
@@ -76,7 +85,7 @@ export const generateBannerImage = (
     {
       width: 1200,
       height: 600,
-      fonts: [fonts["inter-semibold"], fonts["inter-regular"]],
+      fonts: availableFonts.length > 0 ? availableFonts : [],
     }
   );
 };

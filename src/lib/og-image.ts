@@ -32,15 +32,21 @@ export const verifyOgImageSignature = (
 };
 
 export const signOgImageUrl = (param: OpenGraphImageParams) => {
-  const queryParams = new URLSearchParams();
-  queryParams.append("title", param.title);
-  if (param.label) {
-    queryParams.append("label", param.label);
+  try {
+    const queryParams = new URLSearchParams();
+    queryParams.append("title", param.title);
+    if (param.label) {
+      queryParams.append("label", param.label);
+    }
+    if (param.brand) {
+      queryParams.append("brand", param.brand);
+    }
+    const { signature } = signOgImageParams(param);
+    queryParams.append("s", signature);
+    return urlJoin(config.baseUrl, `/api/og-image/?${queryParams.toString()}`);
+  } catch (error) {
+    console.error("Error generating OG image URL:", error);
+    // Return a fallback URL or empty string
+    return `${config.baseUrl}/api/og-image/?title=${encodeURIComponent(param.title)}&s=fallback`;
   }
-  if (param.brand) {
-    queryParams.append("brand", param.brand);
-  }
-  const { signature } = signOgImageParams(param);
-  queryParams.append("s", signature);
-  return urlJoin(config.baseUrl, `/api/og-image/?${queryParams.toString()}`);
 };
