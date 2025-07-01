@@ -42,6 +42,7 @@ export const Header: FunctionComponent = () => {
             
             <MenuItem setActive={setActive} active={active} item="Blog" href="/">
               <div className="flex flex-col space-y-4 text-sm">
+                <HoveredLink href="/blog">All Posts</HoveredLink>
                 <HoveredLink href="/#latest-posts">Latest Posts</HoveredLink>
                 <HoveredLink href="/tag">Browse by Tags</HoveredLink>
                 <HoveredLink href="/rss">RSS Feed</HoveredLink>
@@ -142,6 +143,9 @@ export const Header: FunctionComponent = () => {
                 <div>
                   <h3 className="text-lg font-medium text-black dark:text-white mb-3">Blog</h3>
                   <div className="space-y-2 ml-4">
+                    <Link href="/blog" className="block py-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" onClick={toggleMobileMenu}>
+                      All Posts
+                    </Link>
                     <Link href="/" className="block py-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" onClick={toggleMobileMenu}>
                       Latest Posts
                     </Link>
