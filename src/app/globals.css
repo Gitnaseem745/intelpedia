@@ -265,3 +265,8 @@
   border-color: #374151;
   color: #9ca3af;
 }
+
+/* Text shadow utility for better readability over images */
+.shadow-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
