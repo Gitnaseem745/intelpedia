@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import { NextRequest } from 'next/server';
 
+// admin verification 
 export interface AdminJWTPayload {
   isAdmin: boolean;
   exp: number;
