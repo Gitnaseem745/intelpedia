@@ -5,19 +5,26 @@ Allow: /
 Sitemap: https://www.intelpedia.tech/sitemap.xml
 Sitemap: https://www.intelpedia.tech/blog/sitemap.xml
 Sitemap: https://www.intelpedia.tech/tag/sitemap.xml
+Sitemap: https://www.intelpedia.tech/tools/sitemap.xml
 Sitemap: https://www.intelpedia.tech/static/sitemap.xml
 
 # Block crawling of admin or private pages
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
+Disallow: /.well-known/
 
 # Allow crawling of important pages
 Allow: /blog/
 Allow: /tag/
+Allow: /tools/
 Allow: /about/
 Allow: /privacy-policy/
 Allow: /terms-of-service/
+Allow: /submit-tool/
+
+# Crawl-delay for politeness (optional)
+Crawl-delay: 1
 
 # Crawl delay (optional)
 Crawl-delay: 1
