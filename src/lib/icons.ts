@@ -13,7 +13,18 @@ import {
   TrendingUp,
   Search,
   ArrowLeft,
-  Rss
+  Rss,
+  Copy,
+  Check,
+  ExternalLink,
+  Download,
+  Monitor,
+  Smartphone,
+  Square,
+  Share2,
+  Twitter,
+  Facebook,
+  Linkedin
 } from "lucide-react";
 
 // Re-export for use throughout the app
@@ -30,5 +41,16 @@ export {
   TrendingUp,
   Search,
   ArrowLeft,
-  Rss
+  Rss,
+  Copy,
+  Check,
+  ExternalLink,
+  Download,
+  Monitor,
+  Smartphone,
+  Square,
+  Share2,
+  Twitter,
+  Facebook,
+  Linkedin
 };

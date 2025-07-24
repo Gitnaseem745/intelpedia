@@ -11,6 +11,9 @@ import type { Metadata } from "next";
 import type { WebSite, Organization, WithContext } from "schema-dts";
 import { DynamicTagCard } from "@/components/DynamicComponents";
 
+// Enable ISR with 30 minute revalidation for home page
+export const revalidate = 1800; // 30 minutes in seconds
+
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

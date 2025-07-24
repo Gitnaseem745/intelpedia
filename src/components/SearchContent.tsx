@@ -1,11 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, X } from "lucide-react";
+import { Search, X, FileText, Wrench } from "lucide-react";
 import { wisp, GetPostsResult } from "@/lib/wisp";
+import { useToolSearch } from "@/hooks/useTools";
+import { ToolDocument } from "@/models/Tool";
 import Link from "next/link";
 import Image from "next/image";
 import { formatDate } from "date-fns";
+import { Badge } from "@/components/ui/badge";
+import ToolCard from "@/components/ToolCard";
 
 interface SearchContentProps {
   isOpen: boolean;
@@ -14,15 +18,22 @@ interface SearchContentProps {
 
 const SearchContent: React.FC<SearchContentProps> = ({ isOpen, onClose }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState<GetPostsResult["posts"]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [blogResults, setBlogResults] = useState<GetPostsResult["posts"]>([]);
+  const [isLoadingBlog, setIsLoadingBlog] = useState(false);
   const [allPosts, setAllPosts] = useState<GetPostsResult["posts"]>([]);
+  const [activeTab, setActiveTab] = useState<'all' | 'blog' | 'tools'>('all');
+
+  // Tool search hook
+  const { data: toolResults, isLoading: isLoadingTools } = useToolSearch({
+    q: searchQuery || undefined,
+    limit: 5
+  });
 
   // Fetch all posts on component mount
   useEffect(() => {
     const fetchAllPosts = async () => {
       try {
-        const result = await wisp.getPosts({ limit: 100 }); // Get more posts for better search
+        const result = await wisp.getPosts({ limit: 100 });
         setAllPosts(result.posts);
       } catch (error) {
         console.error("Error fetching posts:", error);
@@ -34,16 +45,16 @@ const SearchContent: React.FC<SearchContentProps> = ({ isOpen, onClose }) => {
     }
   }, [isOpen]);
 
-  // Search function
+  // Search function for blog posts
   useEffect(() => {
     if (!searchQuery.trim()) {
-      setSearchResults([]);
+      setBlogResults([]);
       return;
     }
 
-    setIsLoading(true);
+    setIsLoadingBlog(true);
     
-    // Simple client-side search
+    // Simple client-side search for blog posts
     const filteredPosts = allPosts.filter((post) => {
       const searchLower = searchQuery.toLowerCase();
       return (
@@ -53,8 +64,8 @@ const SearchContent: React.FC<SearchContentProps> = ({ isOpen, onClose }) => {
       );
     });
 
-    setSearchResults(filteredPosts);
-    setIsLoading(false);
+    setBlogResults(filteredPosts);
+    setIsLoadingBlog(false);
   }, [searchQuery, allPosts]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -65,9 +76,17 @@ const SearchContent: React.FC<SearchContentProps> = ({ isOpen, onClose }) => {
 
   const handleClose = () => {
     setSearchQuery("");
-    setSearchResults([]);
+    setBlogResults([]);
+    setActiveTab('all');
     onClose();
   };
+
+  const tools = toolResults?.tools || [];
+  const isLoading = isLoadingBlog || isLoadingTools;
+  const hasResults = blogResults.length > 0 || tools.length > 0;
+
+  const filteredBlogResults = activeTab === 'tools' ? [] : blogResults.slice(0, 5);
+  const filteredToolResults = activeTab === 'blog' ? [] : tools.slice(0, 5);
 
   return (
     <AnimatePresence>
@@ -85,128 +104,208 @@ const SearchContent: React.FC<SearchContentProps> = ({ isOpen, onClose }) => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -20 }}
             transition={{ duration: 0.3, type: "spring", damping: 25, stiffness: 300 }}
-            className="bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl w-full max-w-2xl mx-4 max-h-[80vh] overflow-hidden"
+            className="bg-card dark:bg-card rounded-2xl shadow-2xl w-full max-w-3xl mx-4 max-h-[80vh] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Search Header */}
-            <div className="p-6 border-b border-neutral-200 dark:border-neutral-700">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-400 w-5 h-5" />
+            <div className="p-6 border-b border-border">
+              <div className="relative mb-4">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="Search posts, tags, or content..."
+                  placeholder="Search posts, tools, tags, or content..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onKeyDown={handleKeyDown}
                   autoFocus
-                  className="w-full pl-10 pr-10 py-3 bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 text-neutral-900 dark:text-white placeholder-neutral-500 dark:placeholder-neutral-400"
+                  className="w-full pl-10 pr-10 py-3 bg-input border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-ring text-foreground placeholder:text-muted-foreground"
                 />
                 <button
                   onClick={handleClose}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
+
+              {/* Filter Tabs */}
+              {searchQuery && (
+                <div className="flex space-x-2">
+                  <button
+                    onClick={() => setActiveTab('all')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      activeTab === 'all'
+                        ? 'bg-primary/10 text-primary'
+                        : 'text-muted-foreground hover:bg-muted'
+                    }`}
+                  >
+                    All ({blogResults.length + tools.length})
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('blog')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center ${
+                      activeTab === 'blog'
+                        ? 'bg-primary/10 text-primary'
+                        : 'text-muted-foreground hover:bg-muted'
+                    }`}
+                  >
+                    <FileText className="w-4 h-4 mr-1" />
+                    Posts ({blogResults.length})
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('tools')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center ${
+                      activeTab === 'tools'
+                        ? 'bg-primary/10 text-primary'
+                        : 'text-muted-foreground hover:bg-muted'
+                    }`}
+                  >
+                    <Wrench className="w-4 h-4 mr-1" />
+                    Tools ({tools.length})
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Search Results */}
             <div className="max-h-[60vh] overflow-y-auto">
               {isLoading ? (
                 <div className="p-8 text-center">
-                  <div className="animate-spin w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full mx-auto"></div>
-                  <p className="mt-4 text-neutral-600 dark:text-neutral-400">Searching...</p>
+                  <div className="animate-spin w-8 h-8 border-2 border-primary border-t-transparent rounded-full mx-auto"></div>
+                  <p className="mt-4 text-muted-foreground">Searching...</p>
                 </div>
-              ) : searchQuery && searchResults.length === 0 ? (
+              ) : searchQuery && !hasResults ? (
                 <div className="p-8 text-center">
                   <Search className="w-12 h-12 text-neutral-400 mx-auto mb-4" />
-                  <p className="text-neutral-600 dark:text-neutral-400">No posts found for &ldquo;{searchQuery}&rdquo;</p>
+                  <p className="text-neutral-600 dark:text-neutral-400">No results found for &ldquo;{searchQuery}&rdquo;</p>
                   <p className="text-sm text-neutral-500 dark:text-neutral-500 mt-2">
                     Try searching with different keywords
                   </p>
                 </div>
-              ) : searchQuery && searchResults.length > 0 ? (
-                <div className="p-4">
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 px-2">
-                    Found {searchResults.length} result{searchResults.length !== 1 ? 's' : ''}
-                  </p>
-                  <div className="space-y-4">
-                    {searchResults.map((post) => (
-                      <motion.div
-                        key={post.id}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="group"
-                      >
-                        <Link
-                          href={`/blog/${post.slug}`}
-                          onClick={handleClose}
-                          className="block p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
-                        >
-                          <div className="flex space-x-4">
-                            {/* Post Image */}
-                            <div className="flex-shrink-0">
-                              <div className="w-16 h-16 rounded-lg overflow-hidden bg-neutral-200 dark:bg-neutral-700">
-                                <Image
-                                  src={post.image || "/images/placeholder.webp"}
-                                  alt={post.title}
-                                  width={64}
-                                  height={64}
-                                  className="w-full h-full object-cover"
-                                />
-                              </div>
-                            </div>
-
-                            {/* Post Content */}
-                            <div className="flex-1 min-w-0">
-                              <h3 className="font-medium text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
-                                {post.title}
-                              </h3>
-                              
-                              {post.description && (
-                                <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2">
-                                  {post.description}
-                                </p>
-                              )}
-
-                              <div className="mt-2 flex items-center space-x-4 text-xs text-neutral-500 dark:text-neutral-500">
-                                <span>
-                                  {formatDate(post.publishedAt || post.updatedAt, "MMM dd, yyyy")}
-                                </span>
-                                
-                                {post.tags.length > 0 && (
-                                  <div className="flex space-x-1">
-                                    {post.tags.slice(0, 2).map((tag) => (
-                                      <span
-                                        key={tag.id}
-                                        className="px-2 py-1 bg-neutral-100 dark:bg-neutral-700 rounded-full text-xs"
-                                      >
-                                        #{tag.name}
-                                      </span>
-                                    ))}
-                                    {post.tags.length > 2 && (
-                                      <span className="text-neutral-400">
-                                        +{post.tags.length - 2} more
-                                      </span>
+              ) : searchQuery && hasResults ? (
+                <div className="p-4 space-y-6">
+                  {/* Blog Posts Results */}
+                  {filteredBlogResults.length > 0 && (
+                    <div>
+                      <h3 className="text-sm font-medium text-muted-foreground mb-3 px-2 flex items-center">
+                        <FileText className="w-4 h-4 mr-2" />
+                        Blog Posts ({blogResults.length})
+                      </h3>
+                      <div className="space-y-2">
+                        {filteredBlogResults.map((post) => (
+                          <motion.div
+                            key={post.id}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="group"
+                          >
+                            <Link
+                              href={`/blog/${post.slug}`}
+                              onClick={handleClose}
+                              className="block p-3 rounded-xl hover:bg-muted transition-colors"
+                            >
+                              <div className="flex space-x-3">
+                                <div className="flex-shrink-0">
+                                  <div className="w-12 h-12 rounded-lg overflow-hidden bg-muted">
+                                    <Image
+                                      src={post.image || "/images/placeholder.webp"}
+                                      alt={post.title}
+                                      width={48}
+                                      height={48}
+                                      className="w-full h-full object-cover"
+                                    />
+                                  </div>
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <h4 className="font-medium text-foreground group-hover:text-primary transition-colors line-clamp-1">
+                                    {post.title}
+                                  </h4>
+                                  {post.description && (
+                                    <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
+                                      {post.description}
+                                    </p>
+                                  )}
+                                  <div className="mt-2 flex items-center space-x-2 text-xs text-muted-foreground">
+                                    <span>
+                                      {formatDate(post.publishedAt || post.updatedAt, "MMM dd, yyyy")}
+                                    </span>
+                                    {post.tags.length > 0 && (
+                                      <div className="flex space-x-1">
+                                        {post.tags.slice(0, 2).map((tag) => (
+                                          <span
+                                            key={tag.id}
+                                            className="px-2 py-0.5 bg-secondary rounded-full text-xs"
+                                          >
+                                            #{tag.name}
+                                          </span>
+                                        ))}
+                                      </div>
                                     )}
                                   </div>
-                                )}
+                                </div>
                               </div>
-                            </div>
-                          </div>
-                        </Link>
-                      </motion.div>
-                    ))}
-                  </div>
+                            </Link>
+                          </motion.div>
+                        ))}
+                      </div>
+                      {blogResults.length > 5 && activeTab === 'all' && (
+                        <div className="mt-3 text-center">
+                          <button
+                            onClick={() => setActiveTab('blog')}
+                            className="text-sm text-primary hover:underline"
+                          >
+                            View all {blogResults.length} blog posts
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Tools Results */}
+                  {filteredToolResults.length > 0 && (
+                    <div>
+                      <h3 className="text-sm font-medium text-muted-foreground mb-3 px-2 flex items-center">
+                        <Wrench className="w-4 h-4 mr-2" />
+                        Tools ({tools.length})
+                      </h3>
+                      <div className="space-y-2">
+                        {filteredToolResults.map((tool: ToolDocument) => (
+                          <motion.div
+                            key={String(tool._id)}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="group"
+                          >
+                            <ToolCard 
+                              tool={tool} 
+                              variant="search" 
+                              onClose={handleClose}
+                              maxTags={3}
+                            />
+                          </motion.div>
+                        ))}
+                      </div>
+                      {tools.length > 5 && activeTab === 'all' && (
+                        <div className="mt-3 text-center">
+                          <button
+                            onClick={() => setActiveTab('tools')}
+                            className="text-sm text-primary hover:underline"
+                          >
+                            View all {tools.length} tools
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               ) : (
                 <div className="p-8 text-center">
-                  <Search className="w-12 h-12 text-neutral-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-medium text-neutral-900 dark:text-white mb-2">
-                    Search Posts
+                  <Search className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    Search Everything
                   </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400">
-                    Start typing to search through all posts, tags, and content
+                  <p className="text-muted-foreground">
+                    Search through blog posts, AI tools, tags, and content
                   </p>
                 </div>
               )}

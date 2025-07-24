@@ -49,8 +49,15 @@ export const Header: FunctionComponent = () => {
               </div>
             </MenuItem>
 
-            <MenuItem setActive={setActive} active={active} item="Tags" href="/tag" />
+            <MenuItem setActive={setActive} active={active} item="Tools" href="/tools">
+              <div className="flex flex-col space-y-4 text-sm">
+                <HoveredLink href="/tools">All Tools</HoveredLink>
+                <HoveredLink href="/tools/tag/image">AI Image Tools</HoveredLink>
+                <HoveredLink href="/tools/tag/ai">Browse by Tags</HoveredLink>
+              </div>
+            </MenuItem>
             
+            <MenuItem setActive={setActive} active={active} item="Submit Tool" href="/submit-tool" />            
             <MenuItem setActive={setActive} active={active} item="About" href="/about" />
           </Menu>
 
@@ -158,10 +165,26 @@ export const Header: FunctionComponent = () => {
                   </div>
                 </div>
 
-                {/* Tags */}
+                {/* Tools Section */}
                 <div>
-                  <Link href="/tag" className="block py-3 text-lg font-medium text-black dark:text-white hover:text-primary transition-colors" onClick={toggleMobileMenu}>
-                    All Tags
+                  <h3 className="text-lg font-medium text-black dark:text-white mb-3">Tools</h3>
+                  <div className="space-y-2 ml-4">
+                    <Link href="/tools" className="block py-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" onClick={toggleMobileMenu}>
+                      All Tools
+                    </Link>
+                    <Link href="/tools/tag/image" className="block py-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" onClick={toggleMobileMenu}>
+                      AI Image Tools
+                    </Link>
+                    <Link href="/tools/tag/ai" className="block py-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" onClick={toggleMobileMenu}>
+                      Browse by Tags
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Submit Tool */}
+                <div>
+                  <Link href="/submit-tool" className="block py-3 text-lg font-medium text-black dark:text-white hover:text-primary transition-colors" onClick={toggleMobileMenu}>
+                    Submit Tool
                   </Link>
                 </div>
 
