@@ -78,15 +78,24 @@ export default function ToolCard({
   };
 
   const renderToolBanner = (height: 'sm' | 'md' | 'lg' = 'md') => {
+    // Define fixed heights for consistent image display
+    const heights = {
+      sm: 'h-32',    // 128px for compact variant
+      md: 'h-48',    // 192px for default grid variant  
+      lg: 'h-56'     // 224px for larger displays
+    };
+    
+    const fixedHeight = heights["md"];
+    
     if (tool.imgUrl) {
       return (
-        <div className="w-full rounded-t-lg overflow-hidden bg-gradient-to-br from-primary/5 to-primary/10 relative">
+        <div className={`w-full ${fixedHeight} rounded-t-lg overflow-hidden bg-gradient-to-br from-primary/5 to-primary/10 relative`}>
           <Image
             src={tool.imgUrl}
             alt={`${tool.title} preview`}
             width={800}
             height={400}
-            className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className={`w-full ${fixedHeight} object-cover object-top transition-transform duration-300 group-hover:scale-105`}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             onError={(e) => {
               // Fallback to gradient background with icon
@@ -94,7 +103,7 @@ export default function ToolCard({
               const container = target.parentElement;
               if (container) {
                 container.innerHTML = `
-                  <div class="w-full h-48 bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center">
+                  <div class="w-full ${fixedHeight} bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center">
                     <svg class="w-12 h-12 text-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h1m4 0h1M10 3h4a8 8 0 018 8v2a8 8 0 01-8 8h-4a8 8 0 01-8-8V11a8 8 0 018-8z"></path>
                     </svg>
@@ -120,7 +129,7 @@ export default function ToolCard({
     }
     
     return (
-      <div className="w-full h-48 rounded-t-lg bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center relative">
+      <div className={`w-full ${fixedHeight} rounded-t-lg bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center relative`}>
         <Wrench className="w-12 h-12 text-primary/40" />
         
         {/* Pricing Badge Overlay for fallback banner */}
