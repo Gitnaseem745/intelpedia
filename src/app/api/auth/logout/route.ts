@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
       value: '',
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
+      sameSite: process.env.NODE_ENV === 'production' ? 'lax' : 'strict',
       maxAge: 0, // Expire immediately
       path: '/'
     });

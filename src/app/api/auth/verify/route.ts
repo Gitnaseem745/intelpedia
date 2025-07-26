@@ -5,6 +5,16 @@ export async function GET(request: NextRequest) {
   try {
     const token = request.cookies.get('admin-token')?.value;
 
+    // Enhanced debugging for production
+    console.log('Verify route debug:', {
+      hasToken: !!token,
+      tokenLength: token?.length || 0,
+      cookieNames: request.cookies.getAll().map(cookie => cookie.name),
+      userAgent: request.headers.get('user-agent'),
+      origin: request.headers.get('origin'),
+      referer: request.headers.get('referer')
+    });
+
     if (!token) {
       return NextResponse.json(
         { authenticated: false, error: 'No token found' },

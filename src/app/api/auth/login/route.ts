@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
-import { authRateLimiter, getClientIP } from '@/lib/rate-limiter';
+import { authRateLimiter, getClientIP } from '@/lib/serverless-rate-limiter';
 import { loginSchema, sanitizeInput } from '@/lib/validation';
 
 export async function POST(request: NextRequest) {
@@ -45,11 +45,25 @@ export async function POST(request: NextRequest) {
     const jwtSecret = process.env.JWT_SECRET;
 
     if (!adminPasswordHash || !jwtSecret) {
+      console.error('Missing environment variables:', {
+        hasAdminPassword: !!adminPasswordHash,
+        hasJWTSecret: !!jwtSecret,
+        adminPasswordLength: adminPasswordHash?.length || 0
+      });
       return NextResponse.json(
         { error: 'Server configuration error' },
         { status: 500 }
       );
     }
+
+    // Debug: Log password hash format (only first and last few chars for security)
+    console.log('Password hash format check:', {
+      starts_with_dollar: adminPasswordHash.startsWith('$'),
+      starts_with_backslash: adminPasswordHash.startsWith('\\'),
+      length: adminPasswordHash.length,
+      first_chars: adminPasswordHash.substring(0, 4),
+      last_chars: adminPasswordHash.substring(adminPasswordHash.length - 4)
+    });
 
     // Use bcrypt to compare the provided password with the hashed password
     const isPasswordValid = await bcrypt.compare(sanitizedPassword, adminPasswordHash);
@@ -76,9 +90,17 @@ export async function POST(request: NextRequest) {
         value: token,
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
-        sameSite: 'strict',
-        maxAge: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
+        sameSite: process.env.NODE_ENV === 'production' ? 'lax' : 'strict', // 'lax' for production
+        maxAge: 24 * 60 * 60, // 24 hours in seconds (not milliseconds)
         path: '/'
+      });
+
+      // Debug: Log cookie setting
+      console.log('Cookie set debug:', {
+        tokenLength: token.length,
+        nodeEnv: process.env.NODE_ENV,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: process.env.NODE_ENV === 'production' ? 'lax' : 'strict'
       });
 
       return response;
