@@ -59,11 +59,12 @@ export default function ToolCard({
             width={image}
             height={image}
             className="w-full h-full object-cover"
+            loading="lazy"
             onError={(e) => {
               // Fallback to icon if image fails to load
               const target = e.target as HTMLImageElement;
               target.style.display = 'none';
-              target.parentElement!.innerHTML = `<div class="w-full h-full bg-primary/10 flex items-center justify-center"><svg class="${icon} text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h1m4 0h1M10 3h4a8 8 0 018 8v2a8 8 0 01-8 8h-4a8 8 0 01-8-8V11a8 8 0 018-8z"></path></svg></div>`;
+              target.parentElement!.innerHTML = `<div class="w-full h-full bg-primary/10 flex items-center justify-center"><svg class="${icon} text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-label="${tool.title} fallback icon"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h1m4 0h1M10 3h4a8 8 0 018 8v2a8 8 0 01-8 8h-4a8 8 0 01-8-8V11a8 8 0 018-8z"></path></svg></div>`;
             }}
           />
         </div>
@@ -72,7 +73,7 @@ export default function ToolCard({
     
     return (
       <div className={`${wrapper} rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0`}>
-        <Wrench className={`${icon} text-primary`} />
+        <Wrench className={`${icon} text-primary`} aria-label={`${tool.title} icon`} />
       </div>
     );
   };
@@ -92,11 +93,13 @@ export default function ToolCard({
         <div className={`w-full ${fixedHeight} rounded-t-lg overflow-hidden bg-gradient-to-br from-primary/5 to-primary/10 relative`}>
           <Image
             src={tool.imgUrl}
-            alt={`${tool.title} preview`}
+            alt={`${tool.title} preview image`}
             width={800}
             height={400}
             className={`w-full ${fixedHeight} object-cover object-top transition-transform duration-300 group-hover:scale-105`}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="lazy"
+            priority={false}
             onError={(e) => {
               // Fallback to gradient background with icon
               const target = e.target as HTMLImageElement;
@@ -104,7 +107,7 @@ export default function ToolCard({
               if (container) {
                 container.innerHTML = `
                   <div class="w-full ${fixedHeight} bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center">
-                    <svg class="w-12 h-12 text-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-12 h-12 text-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-label="${tool.title} fallback preview">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h1m4 0h1M10 3h4a8 8 0 018 8v2a8 8 0 01-8 8h-4a8 8 0 01-8-8V11a8 8 0 018-8z"></path>
                     </svg>
                   </div>
@@ -130,7 +133,7 @@ export default function ToolCard({
     
     return (
       <div className={`w-full ${fixedHeight} rounded-t-lg bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center relative`}>
-        <Wrench className="w-12 h-12 text-primary/40" />
+        <Wrench className="w-12 h-12 text-primary/40" aria-label={`${tool.title} preview icon`} />
         
         {/* Pricing Badge Overlay for fallback banner */}
         <div className="absolute top-2 left-2 z-10">
@@ -153,13 +156,22 @@ export default function ToolCard({
           variant="secondary"
           className={`text-xs ${onTagClick ? 'cursor-pointer hover:bg-secondary/80' : ''}`}
           onClick={onTagClick ? (e) => handleTagClick(tag, e) : undefined}
+          role={onTagClick ? "button" : undefined}
+          tabIndex={onTagClick ? 0 : undefined}
+          onKeyDown={onTagClick ? (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              handleTagClick(tag, e as any);
+            }
+          } : undefined}
+          aria-label={onTagClick ? `Filter by ${tag} tag` : undefined}
         >
-          {variant === 'recommended' && <TagIcon className="w-3 h-3 mr-1" />}
+          {variant === 'recommended' && <TagIcon className="w-3 h-3 mr-1" aria-hidden="true" />}
           {tag}
         </Badge>
       ))}
       {tool.tags && tool.tags.length > maxTags && (
-        <Badge variant="outline" className="text-xs">
+        <Badge variant="outline" className="text-xs" aria-label={`${tool.tags.length - maxTags} more tags available`}>
           +{tool.tags.length - maxTags}{variant === 'compact' ? '' : ' more'}
         </Badge>
       )}
@@ -196,12 +208,13 @@ export default function ToolCard({
             View Details
           </Button>
         </Link>
-        {showVisitButton && (
+        {showVisitButton && tool.siteUrl && (
           <Button
             variant={variant === 'recommended' ? 'outline' : 'default'}
             size="sm"
             onClick={() => window.open(tool.siteUrl, '_blank', 'noopener,noreferrer')}
             className={variant === 'recommended' ? 'px-3' : variant === 'list' ? 'w-full' : ''}
+            aria-label={`Visit ${tool.title} website`}
           >
             {variant === 'recommended' ? (
               <ExternalLink className="w-4 h-4" />
@@ -224,7 +237,7 @@ export default function ToolCard({
       return (
         <div className="flex items-center justify-between text-xs text-muted-foreground">
           <div className="flex items-center space-x-1">
-            <Calendar className="h-3 w-3" />
+            <Calendar className="h-3 w-3" aria-hidden="true" />
             <span>{format(new Date(tool.updatedAt || tool.createdAt), 'MMM d, yyyy')}</span>
           </div>
           
@@ -235,9 +248,14 @@ export default function ToolCard({
               size="sm"
               className="h-6 px-2 text-xs"
             >
-              <a href={tool.siteUrl} target="_blank" rel="noopener noreferrer">
+              <Link 
+                href={tool.siteUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label={`Visit ${tool.title} website`}
+              >
                 <ExternalLink className="h-3 w-3" />
-              </a>
+              </Link>
             </Button>
           )}
         </div>
@@ -246,7 +264,7 @@ export default function ToolCard({
     
     return (
       <div className="flex items-center text-sm text-muted-foreground">
-        <Calendar className="w-4 h-4 mr-1" />
+        <Calendar className="w-4 h-4 mr-1" aria-hidden="true" />
         {formatDate(new Date(tool.createdAt), 'MMM dd, yyyy')}
       </div>
     );

@@ -3,16 +3,25 @@ import ToolsByTagClient from './ToolsByTagClient';
 import { config } from '@/config';
 import { signOgImageUrl } from '@/lib/og-image';
 import type { CollectionPage, WithContext } from 'schema-dts';
+import connectDB from '@/lib/db';
+import Tool from '@/models/Tool';
 
 async function getTagStats(tag: string) {
   try {
-    const response = await fetch(`${config.baseUrl}/api/tools/search?tag=${encodeURIComponent(tag)}`, {
-      cache: 'no-store',
-    });
-    if (!response.ok) return { count: 0, tools: [] };
-    const data = await response.json();
-    return { count: data.length || 0, tools: data || [] };
+    // During build time, query the database directly instead of making HTTP requests
+    await connectDB();
+    const tagArray = tag.split(',').map(t => t.trim());
+    const searchQuery = { tags: { $in: tagArray } };
+    
+    const count = await Tool.countDocuments(searchQuery);
+    const tools = await Tool.find(searchQuery)
+      .sort({ createdAt: -1 })
+      .limit(10) // Limit for performance during build
+      .lean(); // Use lean() for better performance
+    
+    return { count, tools };
   } catch (error) {
+    console.error('Error fetching tag stats during build:', error);
     return { count: 0, tools: [] };
   }
 }

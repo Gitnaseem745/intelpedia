@@ -37,9 +37,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
 
     // Filter emojis from tags in the response
+    const toolObj = tool.toObject();
     const toolWithFilteredTags = {
-      ...tool.toObject(),
-      tags: filterEmojisFromTags(tool.tags)
+      ...toolObj,
+      tags: filterEmojisFromTags(toolObj.tags)
     };
 
     return NextResponse.json({

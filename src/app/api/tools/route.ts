@@ -22,10 +22,13 @@ export async function GET(request: NextRequest) {
     }
 
     // Filter emojis from tags in the response
-    const toolsWithFilteredTags = tools.map(tool => ({
-      ...tool.toObject(),
-      tags: filterEmojisFromTags(tool.tags)
-    }));
+    const toolsWithFilteredTags = tools.map(tool => {
+      const toolObj = tool.toObject();
+      return {
+        ...toolObj,
+        tags: filterEmojisFromTags(toolObj.tags)
+      };
+    });
 
     return NextResponse.json({
       message: `Total ${tools.length} tools are fetched from db.`,

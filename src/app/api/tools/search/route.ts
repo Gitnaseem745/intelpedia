@@ -41,10 +41,13 @@ export async function GET(request: NextRequest) {
       .limit(limit);
 
     // Filter emojis from tags in the response
-    const toolsWithFilteredTags = tools.map(tool => ({
-      ...tool.toObject(),
-      tags: filterEmojisFromTags(tool.tags)
-    }));
+    const toolsWithFilteredTags = tools.map(tool => {
+      const toolObj = tool.toObject();
+      return {
+        ...toolObj,
+        tags: filterEmojisFromTags(toolObj.tags)
+      };
+    });
 
     const totalPages = Math.ceil(totalTools / limit);
 

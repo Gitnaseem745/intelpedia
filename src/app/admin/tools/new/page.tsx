@@ -130,8 +130,22 @@ export default function NewToolPage() {
         description: "Tool created successfully!",
       });
       
+      // Reset the form
+      setFormData({
+        title: '',
+        description: '',
+        tags: [],
+        siteUrl: '',
+        imgUrl: '',
+        features: [],
+        featured: false,
+        isFree: undefined,
+        pricing: undefined
+      });
+      setNewTag('');
+      
       // Redirect to the edit page of the newly created tool
-      router.push(`/admin/tools/${result.tool._id}/edit`);
+      router.push(`/admin/tools/${result.newTool._id}/edit`);
     } catch (error: any) {
       toast({
         title: "Error",

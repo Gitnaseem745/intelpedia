@@ -70,6 +70,9 @@ export function removeEmojis(text: string): string {
 /**
  * Filters emojis from an array of tags
  */
-export function filterEmojisFromTags(tags: string[]): string[] {
+export function filterEmojisFromTags(tags: string[] | undefined | null): string[] {
+  if (!tags || !Array.isArray(tags)) {
+    return [];
+  }
   return tags.map(tag => removeEmojis(tag)).filter(tag => tag.length > 0);
 }
