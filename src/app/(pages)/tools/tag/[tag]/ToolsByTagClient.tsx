@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { formatDate } from 'date-fns';
 import { useParams, useRouter } from 'next/navigation';
 import { ToolDocument } from '@/models/Tool';
+import ToolCard from '@/components/ToolCard';
 
 export default function ToolsByTagClient() {
   const params = useParams();
@@ -36,66 +37,6 @@ export default function ToolsByTagClient() {
     e.preventDefault();
     setCurrentPage(1);
   };
-
-  const ToolCard = ({ tool }: { tool: ToolDocument }) => (
-    <div className="bg-card rounded-lg border border-border p-6 hover:bg-card/80 hover:shadow-lg transition-shadow duration-200">
-      <div className="flex justify-between items-start mb-4">
-        <div className="flex-1">
-          <Link 
-            href={`/tools/${tool._id}`}
-            className="text-xl font-semibold text-card-foreground hover:text-primary transition-colors"
-          >
-            {tool.title}
-          </Link>
-          <p className="text-muted-foreground mt-2 line-clamp-3">
-            {tool.description}
-          </p>
-        </div>
-      </div>
-      
-      <div className="flex flex-wrap gap-2 mb-4">
-        {tool.tags?.slice(0, 3).map((toolTag: string, index: number) => (
-          <Badge 
-            key={index} 
-            variant={toolTag === tag ? 'default' : 'secondary'}
-            className="text-xs"
-          >
-            {toolTag}
-          </Badge>
-        ))}
-        {tool.tags?.length > 3 && (
-          <Badge variant="outline" className="text-xs">
-            +{tool.tags.length - 3} more
-          </Badge>
-        )}
-      </div>
-      
-      <div className="flex items-center justify-between">
-        <div className="flex items-center text-sm text-muted-foreground">
-          <Calendar className="w-4 h-4 mr-1" />
-          {formatDate(new Date(tool.createdAt), 'MMM dd, yyyy')}
-        </div>
-        <div className="flex space-x-2">
-          <Link href={`/tools/${tool._id}`}>
-            <Button variant="outline" size="sm">
-              View Details
-            </Button>
-          </Link>
-          <a 
-            href={tool.siteUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex"
-          >
-            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
-              <ExternalLink className="w-4 h-4 mr-1" />
-              Visit
-            </Button>
-          </a>
-        </div>
-      </div>
-    </div>
-  );
 
   const ToolListItem = ({ tool }: { tool: ToolDocument }) => (
     <div className="bg-card rounded-lg border border-border p-6 hover:bg-card/80 hover:shadow-md transition-shadow duration-200">
