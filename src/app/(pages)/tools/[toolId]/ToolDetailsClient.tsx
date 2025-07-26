@@ -322,7 +322,7 @@ export default function ToolDetailsClient() {
                                     className="w-full justify-start"
                                     onClick={() => {
                                         const url = window.location.href;
-                                        const text = `Check out ${tool.title} - ${tool.description}`;
+                                        const text = `Check out ${tool.title} - ${tool.description.length > 155 ? `${tool.description.slice(0, 155)}...` : tool.description}`;
                                         navigator.clipboard.writeText(`${text} ${url}`);
                                     }}
                                 >
@@ -334,7 +334,7 @@ export default function ToolDetailsClient() {
                                     className="w-full justify-start"
                                     onClick={() => {
                                         const url = window.location.href;
-                                        const text = `Check out ${tool.title} - ${tool.description}`;
+                                        const text = `Check out ${tool.title} - ${tool.description.length > 155 ? `${tool.description.slice(0, 155)}...` : tool.description}`;
                                         window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
                                     }}
                                 >
