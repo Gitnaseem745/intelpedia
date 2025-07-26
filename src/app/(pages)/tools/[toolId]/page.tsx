@@ -71,7 +71,7 @@ export async function generateMetadata(
   const cleanTitle = title.length > 50 ? `${title.slice(0, 47)}...` : title;
   const cleanDescription = description.length > 155 ? `${description.slice(0, 152)}...` : description;
   
-  const metaTitle = `${cleanTitle} - AI Tool Review | Intelpedia`;
+  const metaTitle = `${cleanTitle} Reviews ${new Date().getFullYear()}: Details, Pricing, & Features`;
   const metaDescription = `${cleanDescription} Discover features, pricing${pricing ? ` ($${pricing})` : isFree ? ' (Free)' : ''}, and user insights.`;
   
   const ogImage = imgUrl || signOgImageUrl({ 
