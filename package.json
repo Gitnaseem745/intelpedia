@@ -10,7 +10,9 @@
     "lint": "next lint",
     "test-api": "node scripts/test-api.js",
     "test-isr": "node scripts/test-isr-setup.js",
-    "optimize-cache": "node scripts/optimize-cache.js"
+    "optimize-cache": "node scripts/optimize-cache.js",
+    "preview-delete-no-image": "node scripts/preview-delete-tools-without-image.js",
+    "delete-tools-no-image": "node scripts/delete-tools-without-image.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

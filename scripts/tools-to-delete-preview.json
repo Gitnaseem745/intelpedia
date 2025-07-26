@@ -1,0 +1,3046 @@
+{
+  "timestamp": "2025-07-26T13:25:43.404Z",
+  "summary": {
+    "approvedTools": {
+      "total": 246,
+      "withoutImage": 229,
+      "percentage": 93.08943089430895
+    },
+    "pendingTools": {
+      "total": 4,
+      "withoutImage": 2,
+      "percentage": 50
+    },
+    "totalToDelete": 231
+  },
+  "toolsToDelete": {
+    "approved": [
+      {
+        "_id": "687e3524e01f5580658d484a",
+        "title": "MultiChat AI",
+        "siteUrl": "https://multichatai.com/",
+        "tags": [
+          "💬",
+          "ai",
+          "chatbot",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:04.316Z"
+      },
+      {
+        "_id": "687e3524e01f5580658d484c",
+        "title": "GIGAFAZE",
+        "siteUrl": "https://gigafaze.com/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:04.401Z"
+      },
+      {
+        "_id": "687e3524e01f5580658d484e",
+        "title": "Inker AI",
+        "siteUrl": "https://inker.ai/",
+        "tags": [
+          "🎨",
+          "ai",
+          "art",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:04.568Z"
+      },
+      {
+        "_id": "687e3524e01f5580658d4850",
+        "title": "TarotQA",
+        "siteUrl": "https://tarotqa.com/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:04.731Z"
+      },
+      {
+        "_id": "687e3524e01f5580658d4852",
+        "title": "SketchBubble AI Presentation Maker",
+        "siteUrl": "https://sketchbubble.com/en/ai-presentation-maker",
+        "tags": [
+          "🖥️",
+          "ai",
+          "presentations",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:04.825Z"
+      },
+      {
+        "_id": "687e3524e01f5580658d4855",
+        "title": "Backlink Exchange Marketplace",
+        "siteUrl": "https://praneetbrar.com/backlink-marketplace",
+        "tags": [
+          "💻",
+          "ai",
+          "seo",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:04.903Z"
+      },
+      {
+        "_id": "687e3524e01f5580658d4857",
+        "title": "Backlink Bundle",
+        "siteUrl": "https://praneetbrar.com/product/backlink-bundle",
+        "tags": [
+          "💻",
+          "ai",
+          "seo",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:04.993Z"
+      },
+      {
+        "_id": "687e3525e01f5580658d4859",
+        "title": "Make My Plan",
+        "siteUrl": "https://makemyplan.net/",
+        "tags": [
+          "👍",
+          "ai",
+          "productivity",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:05.101Z"
+      },
+      {
+        "_id": "687e3525e01f5580658d485b",
+        "title": "Contract Aura",
+        "siteUrl": "https://contractaura.com/",
+        "tags": [
+          "⚖️",
+          "ai",
+          "legal",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:05.202Z"
+      },
+      {
+        "_id": "687e3525e01f5580658d485d",
+        "title": "Aura++",
+        "siteUrl": "https://auraplusplus.com/",
+        "tags": [
+          "💻",
+          "ai",
+          "seo",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:05.305Z"
+      },
+      {
+        "_id": "687e3525e01f5580658d485f",
+        "title": "InstantMind AI",
+        "siteUrl": "https://instantmind.ai/",
+        "tags": [
+          "💡",
+          "ai",
+          "mind",
+          "mapping",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:05.405Z"
+      },
+      {
+        "_id": "687e3525e01f5580658d4861",
+        "title": "Videotowords AI",
+        "siteUrl": "https://videotowords.ai/",
+        "tags": [
+          "🎙️",
+          "ai",
+          "transcription",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:05.505Z"
+      },
+      {
+        "_id": "687e3525e01f5580658d4863",
+        "title": "CoSpaceGPT AI",
+        "siteUrl": "https://cospacegpt.ai/",
+        "tags": [
+          "👍",
+          "ai",
+          "productivity",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:05.603Z"
+      },
+      {
+        "_id": "687e3525e01f5580658d4865",
+        "title": "ThesisAI",
+        "siteUrl": "https://thesisai.io/",
+        "tags": [
+          "🕣",
+          "ai",
+          "academics",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:05.690Z"
+      },
+      {
+        "_id": "687e3525e01f5580658d4867",
+        "title": "MindVideo AI",
+        "siteUrl": "https://mindvideo.ai/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:05.866Z"
+      },
+      {
+        "_id": "687e3525e01f5580658d4869",
+        "title": "V03 AI",
+        "siteUrl": "https://v03ai.com/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:05.952Z"
+      },
+      {
+        "_id": "687e3526e01f5580658d486b",
+        "title": "SchedPilot",
+        "siteUrl": "https://schedpilot.com/",
+        "tags": [
+          "😊",
+          "ai",
+          "social",
+          "media",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:06.038Z"
+      },
+      {
+        "_id": "687e3526e01f5580658d486d",
+        "title": "kiro ai",
+        "siteUrl": "https://kiroai.ai/",
+        "tags": [
+          "🛠️",
+          "ai",
+          "developer",
+          "tools",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:06.116Z"
+      },
+      {
+        "_id": "687e3526e01f5580658d486f",
+        "title": "Memolect",
+        "siteUrl": "https://beta.thememolect.com/",
+        "tags": [
+          "👍",
+          "ai",
+          "productivity",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:06.205Z"
+      },
+      {
+        "_id": "687e3526e01f5580658d4871",
+        "title": "Asyntai",
+        "siteUrl": "https://asyntai.com/",
+        "tags": [
+          "🙋‍♀️",
+          "ai",
+          "customer",
+          "support",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:06.295Z"
+      },
+      {
+        "_id": "687e3526e01f5580658d4873",
+        "title": "DAXRM",
+        "siteUrl": "https://daxrm.com/",
+        "tags": [
+          "📢",
+          "ai",
+          "advertising",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:06.378Z"
+      },
+      {
+        "_id": "687e3526e01f5580658d4875",
+        "title": "MagicPhotos",
+        "siteUrl": "https://magicphotos.com/",
+        "tags": [
+          "📷",
+          "ai",
+          "photography",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:06.487Z"
+      },
+      {
+        "_id": "687e3526e01f5580658d4877",
+        "title": "Deepfake Maker",
+        "siteUrl": "https://deepfakemaker.io/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:06.577Z"
+      },
+      {
+        "_id": "687e3526e01f5580658d4879",
+        "title": "AIVocal: AI Voice Generator",
+        "siteUrl": "https://aivocal.io/",
+        "tags": [
+          "🔊",
+          "ai",
+          "audio",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:06.654Z"
+      },
+      {
+        "_id": "687e3526e01f5580658d487b",
+        "title": "Presentation Intelligence",
+        "siteUrl": "https://pi.inc/",
+        "tags": [
+          "🖥️",
+          "ai",
+          "presentations",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:06.743Z"
+      },
+      {
+        "_id": "687e3526e01f5580658d487d",
+        "title": "Video Face Swap AI",
+        "siteUrl": "https://arting.ai/video-face-swap",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:06.846Z"
+      },
+      {
+        "_id": "687e3526e01f5580658d487f",
+        "title": "Fotol AI",
+        "siteUrl": "https://fotol.ai/",
+        "tags": [
+          "🤖",
+          "ai",
+          "artificial",
+          "intelligence",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:06.977Z"
+      },
+      {
+        "_id": "687e3527e01f5580658d4881",
+        "title": "Interllekt",
+        "siteUrl": "https://interllekt.com/",
+        "tags": [
+          "💡",
+          "ai",
+          "startups",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:07.075Z"
+      },
+      {
+        "_id": "687e3527e01f5580658d4883",
+        "title": "AI French Kiss Video Generator-ImageMover AI",
+        "siteUrl": "https://imagemover.ai/ai-french-kiss-generator",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "generator",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:07.156Z"
+      },
+      {
+        "_id": "687e3527e01f5580658d4885",
+        "title": "y2doc",
+        "siteUrl": "https://y2doc.com/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:07.256Z"
+      },
+      {
+        "_id": "687e3527e01f5580658d4887",
+        "title": "Beauty AI Face Swap",
+        "siteUrl": "https://beautyai.fun/",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:07.351Z"
+      },
+      {
+        "_id": "687e3527e01f5580658d4889",
+        "title": "RBTPracticeTest",
+        "siteUrl": "https://rbtpracticetest.co/",
+        "tags": [
+          "🎓",
+          "ai",
+          "education",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:07.435Z"
+      },
+      {
+        "_id": "687e3527e01f5580658d488b",
+        "title": "PERSO.ai",
+        "siteUrl": "https://perso.ai/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:07.519Z"
+      },
+      {
+        "_id": "687e3527e01f5580658d488d",
+        "title": "WriteMyEssay AI",
+        "siteUrl": "https://writemyessay.ai/",
+        "tags": [
+          "✍️",
+          "ai",
+          "essays",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:07.611Z"
+      },
+      {
+        "_id": "687e3527e01f5580658d488f",
+        "title": "JobCompass.ai",
+        "siteUrl": "https://jobcompass.ai/",
+        "tags": [
+          "🔎",
+          "ai",
+          "job",
+          "search",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:07.704Z"
+      },
+      {
+        "_id": "687e3527e01f5580658d4891",
+        "title": "Dawiso",
+        "siteUrl": "https://dawiso.com/",
+        "tags": [
+          "ai",
+          "data",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:07.796Z"
+      },
+      {
+        "_id": "687e3527e01f5580658d4893",
+        "title": "Molku AI",
+        "siteUrl": "https://molku.ai/",
+        "tags": [
+          "🤖",
+          "ai",
+          "automation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:07.878Z"
+      },
+      {
+        "_id": "687e3527e01f5580658d4895",
+        "title": "Tidio Copilot",
+        "siteUrl": "https://copilot.tidio.com/",
+        "tags": [
+          "🙋‍♀️",
+          "ai",
+          "customer",
+          "support",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:07.970Z"
+      },
+      {
+        "_id": "687e3528e01f5580658d4897",
+        "title": "Kuse AI",
+        "siteUrl": "https://kuse.ai/",
+        "tags": [
+          "👍",
+          "ai",
+          "productivity",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:08.063Z"
+      },
+      {
+        "_id": "687e3528e01f5580658d4899",
+        "title": "PDNob Online AI",
+        "siteUrl": "https://tenorshare.ai/free-online-pdf",
+        "tags": [
+          "📄",
+          "ai",
+          "documents",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:08.155Z"
+      },
+      {
+        "_id": "687e3528e01f5580658d489b",
+        "title": "Best Name Generators",
+        "siteUrl": "https://bestnamegenerators.com/",
+        "tags": [
+          "🌟",
+          "ai",
+          "branding",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:08.234Z"
+      },
+      {
+        "_id": "687e3528e01f5580658d489d",
+        "title": "Lora AI",
+        "siteUrl": "https://loraai.io/",
+        "tags": [
+          "🖼️",
+          "ai",
+          "image",
+          "generator",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:08.324Z"
+      },
+      {
+        "_id": "687e3528e01f5580658d489f",
+        "title": "BestPick - Pick your best photo",
+        "siteUrl": "https://bestpick.fly.dev/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:08.481Z"
+      },
+      {
+        "_id": "687e3528e01f5580658d48a1",
+        "title": "X-doc AI",
+        "siteUrl": "https://x-doc.ai/",
+        "tags": [
+          "🌍",
+          "ai",
+          "translation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:08.577Z"
+      },
+      {
+        "_id": "687e3528e01f5580658d48a3",
+        "title": "GoMim Math AI",
+        "siteUrl": "https://gomim.com/",
+        "tags": [
+          "🎓",
+          "ai",
+          "education",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:08.667Z"
+      },
+      {
+        "_id": "687e3528e01f5580658d48a5",
+        "title": "Wu-Tang Name Generator",
+        "siteUrl": "https://wutang-name-generator.com/",
+        "tags": [
+          "🎨",
+          "ai",
+          "art",
+          "generator",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:08.758Z"
+      },
+      {
+        "_id": "687e3528e01f5580658d48a7",
+        "title": "infatuated AI",
+        "siteUrl": "https://infatuated.ai/",
+        "tags": [
+          "💬",
+          "ai",
+          "chatbot",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:08.834Z"
+      },
+      {
+        "_id": "687e3528e01f5580658d48a9",
+        "title": "1of10 AI Tools for YouTubers",
+        "siteUrl": "https://1of10.com/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:08.919Z"
+      },
+      {
+        "_id": "687e3529e01f5580658d48ab",
+        "title": "ACME.BOT - AI SEO Writer Agent + AI Diagram Generator",
+        "siteUrl": "https://acme.bot/",
+        "tags": [
+          "📝",
+          "ai",
+          "content",
+          "creation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:09.065Z"
+      },
+      {
+        "_id": "687e3529e01f5580658d48ad",
+        "title": "AI Image to Image Generator",
+        "siteUrl": "https://imgtoimggenerator.com/",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:09.162Z"
+      },
+      {
+        "_id": "687e3529e01f5580658d48af",
+        "title": "Polybuzz AI",
+        "siteUrl": "https://polybuzzai.org/",
+        "tags": [
+          "💬",
+          "ai",
+          "chatbot",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:09.263Z"
+      },
+      {
+        "_id": "687e3529e01f5580658d48b1",
+        "title": "Linked API",
+        "siteUrl": "https://linkedapi.io/",
+        "tags": [
+          "🤖",
+          "ai",
+          "automation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:09.355Z"
+      },
+      {
+        "_id": "687e352ae01f5580658d48b3",
+        "title": "asmr videos",
+        "siteUrl": "https://asmrvideos.io/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:10.481Z"
+      },
+      {
+        "_id": "687e352ae01f5580658d48b5",
+        "title": "Racr.Ai",
+        "siteUrl": "https://racr.ai/",
+        "tags": [
+          "💻",
+          "ai",
+          "seo",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:10.739Z"
+      },
+      {
+        "_id": "687e352ae01f5580658d48b7",
+        "title": "NSFW AI image generator AI",
+        "siteUrl": "https://arting.ai/ai-image-generator-nsfw",
+        "tags": [
+          "🎨",
+          "ai",
+          "art",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:10.820Z"
+      },
+      {
+        "_id": "687e352ae01f5580658d48b9",
+        "title": "Wize Up AI",
+        "siteUrl": "https://wizeup.ai/",
+        "tags": [
+          "📊",
+          "ai",
+          "analytics",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:10.980Z"
+      },
+      {
+        "_id": "687e352be01f5580658d48bb",
+        "title": "LiftmyCV",
+        "siteUrl": "https://liftmycv.com/",
+        "tags": [
+          "🔎",
+          "ai",
+          "job",
+          "search",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:11.300Z"
+      },
+      {
+        "_id": "687e352be01f5580658d48bd",
+        "title": "AI Change Background",
+        "siteUrl": "https://dressxme.com/change_background",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:11.381Z"
+      },
+      {
+        "_id": "687e352be01f5580658d48bf",
+        "title": "AI Face Swap",
+        "siteUrl": "https://dressxme.com/face-swap",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:11.480Z"
+      },
+      {
+        "_id": "687e352be01f5580658d48c1",
+        "title": "Harry Potter House Quiz",
+        "siteUrl": "https://harrypotterhousequiz.pro/",
+        "tags": [
+          "🎭",
+          "entertainment",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:11.578Z"
+      },
+      {
+        "_id": "687e352be01f5580658d48c3",
+        "title": "AI Text Summarizer",
+        "siteUrl": "https://aitextsummarizer.net/",
+        "tags": [
+          "📝",
+          "ai",
+          "summarization",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:11.682Z"
+      },
+      {
+        "_id": "687e352be01f5580658d48c5",
+        "title": "Free AI PDF Reader",
+        "siteUrl": "https://aipdfreader.net/",
+        "tags": [
+          "📄",
+          "ai",
+          "pdf",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:11.763Z"
+      },
+      {
+        "_id": "687e352be01f5580658d48c7",
+        "title": "Ask AI Questions Online",
+        "siteUrl": "https://askaiquestions.net/",
+        "tags": [
+          "📚",
+          "ai",
+          "knowledge",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:11.963Z"
+      },
+      {
+        "_id": "687e352ce01f5580658d48c9",
+        "title": "Face Symmetry Test",
+        "siteUrl": "https://facesymmetrytest.app/",
+        "tags": [
+          "📊",
+          "ai",
+          "analytics",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:12.053Z"
+      },
+      {
+        "_id": "687e352ce01f5580658d48cb",
+        "title": "CapGo.ai",
+        "siteUrl": "https://capgo.ai/",
+        "tags": [
+          "🤖",
+          "ai",
+          "automation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:12.140Z"
+      },
+      {
+        "_id": "687e352ce01f5580658d48cd",
+        "title": "Moonmate AI",
+        "siteUrl": "https://moonmate.ai/",
+        "tags": [
+          "😀",
+          "ai",
+          "avatars",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:12.229Z"
+      },
+      {
+        "_id": "687e352ce01f5580658d48cf",
+        "title": "AddSubtitle AI",
+        "siteUrl": "https://addsubtitle.ai/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:12.315Z"
+      },
+      {
+        "_id": "687e352ce01f5580658d48d1",
+        "title": "Smallppt",
+        "siteUrl": "https://smallppt.com/",
+        "tags": [
+          "🖥️",
+          "ai",
+          "presentations",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:12.417Z"
+      },
+      {
+        "_id": "687e352ce01f5580658d48d3",
+        "title": "AI Song Maker",
+        "siteUrl": "https://aisongmaker.io/",
+        "tags": [
+          "🎵",
+          "ai",
+          "music",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:12.733Z"
+      },
+      {
+        "_id": "687e352de01f5580658d48d5",
+        "title": "Lovein.ai",
+        "siteUrl": "https://lovein.ai/",
+        "tags": [
+          "😺",
+          "ai",
+          "anime",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:13.134Z"
+      },
+      {
+        "_id": "687e352de01f5580658d48d7",
+        "title": "Trenz AI",
+        "siteUrl": "https://trenz.ai/",
+        "tags": [
+          "📊",
+          "ai",
+          "analytics",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:13.220Z"
+      },
+      {
+        "_id": "687e352de01f5580658d48d9",
+        "title": "AI Book Summarizer",
+        "siteUrl": "https://aibooksummarizer.com/",
+        "tags": [
+          "📝",
+          "ai",
+          "summarization",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:13.299Z"
+      },
+      {
+        "_id": "687e352de01f5580658d48db",
+        "title": "Free AI Article Summarizer",
+        "siteUrl": "https://articlesummarizer.com/",
+        "tags": [
+          "📝",
+          "ai",
+          "summarization",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:13.390Z"
+      },
+      {
+        "_id": "687e352de01f5580658d48dd",
+        "title": "Study Space",
+        "siteUrl": "https://study.space/",
+        "tags": [
+          "🎓",
+          "ai",
+          "education",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:13.491Z"
+      },
+      {
+        "_id": "687e352de01f5580658d48df",
+        "title": "AICosts.ai",
+        "siteUrl": "https://aicosts.ai/",
+        "tags": [
+          "📊",
+          "ai",
+          "analytics",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:13.576Z"
+      },
+      {
+        "_id": "687e352de01f5580658d48e1",
+        "title": "Vheer",
+        "siteUrl": "https://vheer.com/",
+        "tags": [
+          "🎨",
+          "ai",
+          "art",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:13.671Z"
+      },
+      {
+        "_id": "687e352de01f5580658d48e3",
+        "title": "AiSexting HUB",
+        "siteUrl": "https://aisextinghub.com/",
+        "tags": [
+          "ai",
+          "dating",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:13.775Z"
+      },
+      {
+        "_id": "687e352de01f5580658d48e5",
+        "title": "Free Presentation Maker",
+        "siteUrl": "https://chatgpt.com/g/g-6785553bdb4881919590d97630db8435-free-ai-presentation-maker-poweredtemplate",
+        "tags": [
+          "🖥️",
+          "ai",
+          "presentations",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:13.867Z"
+      },
+      {
+        "_id": "687e352de01f5580658d48e7",
+        "title": "Morphic",
+        "siteUrl": "https://morphic.com/",
+        "tags": [
+          "🎬",
+          "ai",
+          "animation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:13.956Z"
+      },
+      {
+        "_id": "687e352ee01f5580658d48e9",
+        "title": "Hatch",
+        "siteUrl": "https://hatchcanvas.com/",
+        "tags": [
+          "🌟",
+          "ai",
+          "branding",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:14.035Z"
+      },
+      {
+        "_id": "687e352ee01f5580658d48eb",
+        "title": "Skywork ai",
+        "siteUrl": "https://skywork.ai/",
+        "tags": [
+          "🤖",
+          "ai",
+          "automation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:14.117Z"
+      },
+      {
+        "_id": "687e352ee01f5580658d48ed",
+        "title": "AIEase Video Watermark Remover AI",
+        "siteUrl": "https://aiease.ai/remove-video-watermark",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:14.204Z"
+      },
+      {
+        "_id": "687e352ee01f5580658d48ef",
+        "title": "AI AD Maker AI",
+        "siteUrl": "https://admaker.ai/",
+        "tags": [
+          "📢",
+          "ai",
+          "advertising",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:14.292Z"
+      },
+      {
+        "_id": "687e352ee01f5580658d48f1",
+        "title": "AdpexAI",
+        "siteUrl": "https://adpexai.com/",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:14.384Z"
+      },
+      {
+        "_id": "687e352ee01f5580658d48f3",
+        "title": "Sweetai Chat",
+        "siteUrl": "https://sweetai.chat/",
+        "tags": [
+          "ai",
+          "adult",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:14.466Z"
+      },
+      {
+        "_id": "687e352ee01f5580658d48f5",
+        "title": "Manga 18",
+        "siteUrl": "https://manga18.club/",
+        "tags": [
+          "🎭",
+          "entertainment",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:14.557Z"
+      },
+      {
+        "_id": "687e352ee01f5580658d48f7",
+        "title": "Purrplan AI",
+        "siteUrl": "https://purrplan.ai/",
+        "tags": [
+          "😊",
+          "ai",
+          "social",
+          "media",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:14.662Z"
+      },
+      {
+        "_id": "687e352ee01f5580658d48f9",
+        "title": "huggingfans AI",
+        "siteUrl": "https://huggingfans.ai/",
+        "tags": [
+          "💬",
+          "ai",
+          "chatbot",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:14.762Z"
+      },
+      {
+        "_id": "687e352ee01f5580658d48fb",
+        "title": "Eros AI",
+        "siteUrl": "https://erosai.ai/",
+        "tags": [
+          "ai",
+          "dating",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:14.861Z"
+      },
+      {
+        "_id": "687e352ee01f5580658d48fd",
+        "title": "Calorie Snapshot",
+        "siteUrl": "https://caloriesnapshot.com/",
+        "tags": [
+          "📊",
+          "ai",
+          "analytics",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:14.955Z"
+      },
+      {
+        "_id": "687e352fe01f5580658d48ff",
+        "title": "Fellou AI",
+        "siteUrl": "https://fellou.ai/",
+        "tags": [
+          "🤖",
+          "ai",
+          "automation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:15.041Z"
+      },
+      {
+        "_id": "687e352fe01f5580658d4901",
+        "title": "Topology clothing",
+        "siteUrl": "https://topologyclothing.com/",
+        "tags": [
+          "👗",
+          "ai",
+          "fashion",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:15.182Z"
+      },
+      {
+        "_id": "687e352fe01f5580658d4903",
+        "title": "Tineye",
+        "siteUrl": "https://tineye.com/",
+        "tags": [
+          "🕵️🖼",
+          "ai",
+          "image",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:15.254Z"
+      },
+      {
+        "_id": "687e352fe01f5580658d4905",
+        "title": "Reverse Image Search",
+        "siteUrl": "https://duplichecker.com/reverse-image-search.php",
+        "tags": [
+          "🕵️🖼",
+          "ai",
+          "image",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:15.341Z"
+      },
+      {
+        "_id": "687e352fe01f5580658d4907",
+        "title": "AiToolBrowser",
+        "siteUrl": "https://aitoolbrowser.com/",
+        "tags": [
+          "📰",
+          "ai",
+          "aggregator",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:15.443Z"
+      },
+      {
+        "_id": "687e352fe01f5580658d4909",
+        "title": "VO3 AI Video Generator",
+        "siteUrl": "https://vo3ai.com/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:15.540Z"
+      },
+      {
+        "_id": "687e352fe01f5580658d490b",
+        "title": "Readvox",
+        "siteUrl": "https://readvox.com/",
+        "tags": [
+          "🔊",
+          "ai",
+          "text",
+          "to",
+          "speech",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:15.618Z"
+      },
+      {
+        "_id": "687e352fe01f5580658d490d",
+        "title": "CalculatorSuites",
+        "siteUrl": "https://calculatorsuites.com/",
+        "tags": [
+          "💰",
+          "ai",
+          "finance",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:15.710Z"
+      },
+      {
+        "_id": "687e352fe01f5580658d490f",
+        "title": "AI Photo Editor AI",
+        "siteUrl": "https://theinfluencer.ai/ai-photo-editor",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:15.810Z"
+      },
+      {
+        "_id": "687e352fe01f5580658d4911",
+        "title": "CoverSentry",
+        "siteUrl": "https://coversentry.com/",
+        "tags": [
+          "🔎",
+          "ai",
+          "job",
+          "search",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:15.908Z"
+      },
+      {
+        "_id": "687e3530e01f5580658d4913",
+        "title": "WifeyGPT",
+        "siteUrl": "https://wifeygpt.com/",
+        "tags": [
+          "💬",
+          "ai",
+          "chatbot",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:16.016Z"
+      },
+      {
+        "_id": "687e3530e01f5580658d4915",
+        "title": "wan.video",
+        "siteUrl": "https://wan.video/",
+        "tags": [
+          "🤖",
+          "ai",
+          "artificial",
+          "intelligence",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:16.096Z"
+      },
+      {
+        "_id": "687e3530e01f5580658d4917",
+        "title": "AI PDF Summarizer by PDF Guru",
+        "siteUrl": "https://pdfguru.com/pdf-summarizer",
+        "tags": [
+          "ai",
+          "pdf",
+          "summarization",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:16.186Z"
+      },
+      {
+        "_id": "687e3530e01f5580658d4919",
+        "title": "SOLO",
+        "siteUrl": "https://solo.space/",
+        "tags": [
+          "👍",
+          "ai",
+          "productivity",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:16.260Z"
+      },
+      {
+        "_id": "687e3530e01f5580658d491b",
+        "title": "Wondera AI",
+        "siteUrl": "https://wondera.ai/",
+        "tags": [
+          "🎵",
+          "ai",
+          "music",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:16.335Z"
+      },
+      {
+        "_id": "687e3530e01f5580658d491d",
+        "title": "Lanta AI",
+        "siteUrl": "https://lantaai.com/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:16.428Z"
+      },
+      {
+        "_id": "687e3530e01f5580658d491f",
+        "title": "Forage Mail",
+        "siteUrl": "https://foragemail.com/",
+        "tags": [
+          "👍",
+          "ai",
+          "productivity",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:16.512Z"
+      },
+      {
+        "_id": "687e3530e01f5580658d4921",
+        "title": "Leaping AI voice agents",
+        "siteUrl": "https://leapingai.com/",
+        "tags": [
+          "💻",
+          "ai",
+          "software",
+          "engineering",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:16.604Z"
+      },
+      {
+        "_id": "687e3530e01f5580658d4923",
+        "title": "Desirex.ai",
+        "siteUrl": "https://desirex.ai/",
+        "tags": [
+          "ai",
+          "adult",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:16.683Z"
+      },
+      {
+        "_id": "687e3530e01f5580658d4925",
+        "title": "Worktual",
+        "siteUrl": "https://worktual.co.uk/product/lola",
+        "tags": [
+          "🙋‍♀️",
+          "ai",
+          "customer",
+          "support",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:16.766Z"
+      },
+      {
+        "_id": "687e3530e01f5580658d4927",
+        "title": "TVMA Sidekick",
+        "siteUrl": "https://tvma.academy/sidekick",
+        "tags": [
+          "💪",
+          "ai",
+          "fitness",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:16.853Z"
+      },
+      {
+        "_id": "687e3530e01f5580658d4929",
+        "title": "WorkPPT",
+        "siteUrl": "https://ppt.softtooler.com/",
+        "tags": [
+          "🖥️",
+          "ai",
+          "presentations",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:16.935Z"
+      },
+      {
+        "_id": "687e3531e01f5580658d492b",
+        "title": "Clever CSV",
+        "siteUrl": "https://clevercsv.com/",
+        "tags": [
+          "📝",
+          "ai",
+          "content",
+          "creation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:17.020Z"
+      },
+      {
+        "_id": "687e3531e01f5580658d492d",
+        "title": "OOTD Rate",
+        "siteUrl": "https://ootd-rate.com/",
+        "tags": [
+          "👗",
+          "ai",
+          "fashion",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:17.112Z"
+      },
+      {
+        "_id": "687e3531e01f5580658d492f",
+        "title": "Infora AI",
+        "siteUrl": "https://apps.apple.com/us/app/infora-ai/id6741466524",
+        "tags": [
+          "📰",
+          "ai",
+          "news",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:17.204Z"
+      },
+      {
+        "_id": "687e3531e01f5580658d4931",
+        "title": "Happy Face(Cum Face) AI",
+        "siteUrl": "https://happyfaceai.com/",
+        "tags": [
+          "ai",
+          "dating",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:17.381Z"
+      },
+      {
+        "_id": "687e3531e01f5580658d4933",
+        "title": "AI Dance Generator AI",
+        "siteUrl": "https://videoplus.ai/ai-dance-generator",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "generator",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:17.483Z"
+      },
+      {
+        "_id": "687e3531e01f5580658d4935",
+        "title": "Role Char AI",
+        "siteUrl": "https://rolechar.com/",
+        "tags": [
+          "💬",
+          "ai",
+          "chatbot",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:17.577Z"
+      },
+      {
+        "_id": "687e3531e01f5580658d4937",
+        "title": "BestLinkedInTools",
+        "siteUrl": "https://bestlinkedintools.com/",
+        "tags": [
+          "🤖",
+          "ai",
+          "automation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:17.653Z"
+      },
+      {
+        "_id": "687e3531e01f5580658d4939",
+        "title": "Toolsmart Free Paraphrasing Tool AI",
+        "siteUrl": "https://toolsmart.ai/feature-free-paraphrasing-tool",
+        "tags": [
+          "🔄",
+          "ai",
+          "paraphraser",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:17.735Z"
+      },
+      {
+        "_id": "687e3531e01f5580658d493b",
+        "title": "bestcoloringpagesAI",
+        "siteUrl": "https://bestcoloringpages.ai/",
+        "tags": [
+          "🎨",
+          "ai",
+          "art",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:17.815Z"
+      },
+      {
+        "_id": "687e3531e01f5580658d493d",
+        "title": "PrettyInsights",
+        "siteUrl": "https://prettyinsights.com/",
+        "tags": [
+          "📊",
+          "ai",
+          "analytics",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:17.894Z"
+      },
+      {
+        "_id": "687e3532e01f5580658d493f",
+        "title": "Free AI Face Swap | Supawork AI (no sign-up) AI",
+        "siteUrl": "https://supawork.ai/ai-face-swap",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:18.010Z"
+      },
+      {
+        "_id": "687e3532e01f5580658d4941",
+        "title": "Tenorshare AI Bypass",
+        "siteUrl": "https://ai.tenorshare.com/products/ai-bypass",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:18.109Z"
+      },
+      {
+        "_id": "687e3532e01f5580658d4943",
+        "title": "GenTube",
+        "siteUrl": "https://gentube.app/",
+        "tags": [
+          "🎨",
+          "ai",
+          "art",
+          "generator",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:18.196Z"
+      },
+      {
+        "_id": "687e3532e01f5580658d4945",
+        "title": "Spirituality AI",
+        "siteUrl": "https://spirituality-ai.com/",
+        "tags": [
+          "💆",
+          "ai",
+          "therapy",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:18.274Z"
+      },
+      {
+        "_id": "687e3532e01f5580658d4947",
+        "title": "Sugarlab AI",
+        "siteUrl": "https://sugarlab.ai/",
+        "tags": [
+          "ai",
+          "adult",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:18.362Z"
+      },
+      {
+        "_id": "687e3532e01f5580658d4949",
+        "title": "Classmate AI",
+        "siteUrl": "https://classmate.study/",
+        "tags": [
+          "🎓",
+          "ai",
+          "education",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:18.460Z"
+      },
+      {
+        "_id": "687e3532e01f5580658d494b",
+        "title": "UnAIMyText",
+        "siteUrl": "https://unaimytext.com/",
+        "tags": [
+          "❤️",
+          "ai",
+          "text",
+          "generation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:18.550Z"
+      },
+      {
+        "_id": "687e3532e01f5580658d494d",
+        "title": "Toolwave",
+        "siteUrl": "https://toolwave.io/",
+        "tags": [
+          "🤖",
+          "ai",
+          "artificial",
+          "intelligence",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:18.635Z"
+      },
+      {
+        "_id": "687e3532e01f5580658d494f",
+        "title": "YouTube Transcript Generator",
+        "siteUrl": "https://transcriptgenerator.org/",
+        "tags": [
+          "🎙️",
+          "ai",
+          "transcription",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:18.718Z"
+      },
+      {
+        "_id": "687e3532e01f5580658d4951",
+        "title": "Maasai VC",
+        "siteUrl": "https://maasai.vc/",
+        "tags": [
+          "💡",
+          "ai",
+          "startups",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:18.806Z"
+      },
+      {
+        "_id": "687e3532e01f5580658d4953",
+        "title": "Generator AI Music",
+        "siteUrl": "https://generatoraimusic.com/",
+        "tags": [
+          "🎵",
+          "ai",
+          "music",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:18.908Z"
+      },
+      {
+        "_id": "687e3533e01f5580658d4955",
+        "title": "ContractCrab",
+        "siteUrl": "https://contractcrab.com/",
+        "tags": [
+          "⚖️",
+          "ai",
+          "legal",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:19.011Z"
+      },
+      {
+        "_id": "687e3533e01f5580658d4957",
+        "title": "MinutesLink - AI Note Taker",
+        "siteUrl": "https://minuteslink.com/",
+        "tags": [
+          "💼",
+          "ai",
+          "meetings",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:19.105Z"
+      },
+      {
+        "_id": "687e3533e01f5580658d4959",
+        "title": "AIEasyPhoto",
+        "siteUrl": "https://aieasyphoto.com/",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:19.191Z"
+      },
+      {
+        "_id": "687e3533e01f5580658d495b",
+        "title": "SecretDesires AI",
+        "siteUrl": "https://secretdesires.ai/",
+        "tags": [
+          "😀",
+          "ai",
+          "avatars",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:19.275Z"
+      },
+      {
+        "_id": "687e3533e01f5580658d495d",
+        "title": "Weavely.ai",
+        "siteUrl": "https://weavely.ai/",
+        "tags": [
+          "🤖",
+          "ai",
+          "automation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:19.354Z"
+      },
+      {
+        "_id": "687e3533e01f5580658d495f",
+        "title": "AI Tools Open",
+        "siteUrl": "https://aitoolsopen.com/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:19.433Z"
+      },
+      {
+        "_id": "687e3533e01f5580658d4961",
+        "title": "Alex Ma",
+        "siteUrl": "https://linkin.love/",
+        "tags": [
+          "📖",
+          "ai",
+          "story",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:19.508Z"
+      },
+      {
+        "_id": "687e3533e01f5580658d4963",
+        "title": "Nurturally",
+        "siteUrl": "https://nurturally.io/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:19.598Z"
+      },
+      {
+        "_id": "687e3533e01f5580658d4965",
+        "title": "Scalelist",
+        "siteUrl": "https://scalelist.com/",
+        "tags": [
+          "🔌",
+          "ai",
+          "chrome",
+          "extensions",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:19.704Z"
+      },
+      {
+        "_id": "687e3533e01f5580658d4967",
+        "title": "Wavespeed AI",
+        "siteUrl": "https://wavespeed.ai/",
+        "tags": [
+          "�",
+          "ai",
+          "api",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:19.797Z"
+      },
+      {
+        "_id": "687e3533e01f5580658d4969",
+        "title": "Limedock",
+        "siteUrl": "https://limedock.com/",
+        "tags": [
+          "💼",
+          "ai",
+          "business",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:19.879Z"
+      },
+      {
+        "_id": "687e3533e01f5580658d496b",
+        "title": "SimpleApply AI",
+        "siteUrl": "https://simpleapply.ai/",
+        "tags": [
+          "🔎",
+          "ai",
+          "job",
+          "search",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:19.964Z"
+      },
+      {
+        "_id": "687e3534e01f5580658d496d",
+        "title": "KIVA",
+        "siteUrl": "https://wellows.com/kiva",
+        "tags": [
+          "💻",
+          "ai",
+          "seo",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:20.061Z"
+      },
+      {
+        "_id": "687e3534e01f5580658d496f",
+        "title": "DeepSwaper AI",
+        "siteUrl": "https://deepswaper.net/",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:20.153Z"
+      },
+      {
+        "_id": "687e3534e01f5580658d4971",
+        "title": "AI Milf",
+        "siteUrl": "https://cumfaceai.com/ai-milf",
+        "tags": [
+          "🖼️",
+          "ai",
+          "image",
+          "generator",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:20.244Z"
+      },
+      {
+        "_id": "687e3534e01f5580658d4973",
+        "title": "PXZ AI",
+        "siteUrl": "https://pxz.ai/",
+        "tags": [
+          "🎨",
+          "ai",
+          "art",
+          "generator",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:20.328Z"
+      },
+      {
+        "_id": "687e3534e01f5580658d4975",
+        "title": "AI Erotic Smut",
+        "siteUrl": "https://aieroticsmut.com/",
+        "tags": [
+          "ai",
+          "writing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:20.411Z"
+      },
+      {
+        "_id": "687e3534e01f5580658d4977",
+        "title": "Virallyst",
+        "siteUrl": "https://virallyst.com/",
+        "tags": [
+          "📝",
+          "ai",
+          "content",
+          "creation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:20.484Z"
+      },
+      {
+        "_id": "687e3534e01f5580658d4979",
+        "title": "youtube summarizer",
+        "siteUrl": "https://youtubesummarizer.org/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:20.568Z"
+      },
+      {
+        "_id": "687e3534e01f5580658d497b",
+        "title": "ShortsAuto AI",
+        "siteUrl": "https://shortsauto.ai/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:20.646Z"
+      },
+      {
+        "_id": "687e3534e01f5580658d497d",
+        "title": "AI Rate My Body",
+        "siteUrl": "https://airatemybody.com/",
+        "tags": [
+          "💪",
+          "ai",
+          "fitness",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:20.762Z"
+      },
+      {
+        "_id": "687e3534e01f5580658d497f",
+        "title": "Galaxyz - Social Media Management Tool",
+        "siteUrl": "https://galaxyz.io/",
+        "tags": [
+          "😊",
+          "ai",
+          "social",
+          "media",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:20.844Z"
+      },
+      {
+        "_id": "687e3534e01f5580658d4981",
+        "title": "AI Clothes Remover",
+        "siteUrl": "https://cumfaceai.com/clothes-remover",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:20.931Z"
+      },
+      {
+        "_id": "687e3535e01f5580658d4983",
+        "title": "Patient Intake AI",
+        "siteUrl": "https://patientintake.ai/",
+        "tags": [
+          "💪",
+          "ai",
+          "health",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:21.011Z"
+      },
+      {
+        "_id": "687e3535e01f5580658d4985",
+        "title": "ReachInfluencer.ai",
+        "siteUrl": "https://reachinfluencer.ai/",
+        "tags": [
+          "💼",
+          "ai",
+          "marketing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:21.087Z"
+      },
+      {
+        "_id": "687e3535e01f5580658d4987",
+        "title": "freebeat AI",
+        "siteUrl": "https://freebeat.ai/",
+        "tags": [
+          "🎵",
+          "ai",
+          "music",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:21.164Z"
+      },
+      {
+        "_id": "687e3535e01f5580658d4989",
+        "title": "Free YouTube to MP3 Converter AI",
+        "siteUrl": "https://toolsmart.ai/feature-youtube-to-mp3",
+        "tags": [
+          "🔊",
+          "ai",
+          "audio",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:21.251Z"
+      },
+      {
+        "_id": "687e3535e01f5580658d498b",
+        "title": "Make A Craft",
+        "siteUrl": "https://makeacraft.com/",
+        "tags": [
+          "ai",
+          "crafting",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:21.330Z"
+      },
+      {
+        "_id": "687e3535e01f5580658d498d",
+        "title": "AI Text Humanizer",
+        "siteUrl": "https://aitexthumanizer.app/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:21.405Z"
+      },
+      {
+        "_id": "687e3535e01f5580658d498f",
+        "title": "LoveChat",
+        "siteUrl": "https://lovech.at/",
+        "tags": [
+          "😺",
+          "ai",
+          "anime",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:21.485Z"
+      },
+      {
+        "_id": "687e3535e01f5580658d4991",
+        "title": "MakeGirl AI",
+        "siteUrl": "https://makegirl.ai/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:21.582Z"
+      },
+      {
+        "_id": "687e3535e01f5580658d4993",
+        "title": "Owlity AI",
+        "siteUrl": "https://owlity.ai/",
+        "tags": [
+          "❓",
+          "ai",
+          "qa",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:21.671Z"
+      },
+      {
+        "_id": "687e3535e01f5580658d4995",
+        "title": "WhisperTranscribe",
+        "siteUrl": "https://whispertranscribe.com/",
+        "tags": [
+          "🎙️",
+          "ai",
+          "transcription",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:21.756Z"
+      },
+      {
+        "_id": "687e3535e01f5580658d4997",
+        "title": "MGX",
+        "siteUrl": "https://mgx.dev/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:21.846Z"
+      },
+      {
+        "_id": "687e3535e01f5580658d4999",
+        "title": "Adspo",
+        "siteUrl": "https://adspo.co/",
+        "tags": [
+          "📢",
+          "ai",
+          "advertising",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:21.937Z"
+      },
+      {
+        "_id": "687e3536e01f5580658d499b",
+        "title": "AI Bookkeeping AI",
+        "siteUrl": "https://bookeeping.ai/",
+        "tags": [
+          "💰",
+          "ai",
+          "finance",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:22.015Z"
+      },
+      {
+        "_id": "687e3536e01f5580658d499d",
+        "title": "ShipOneDay",
+        "siteUrl": "https://shipone.day/",
+        "tags": [
+          "ai",
+          "saas",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:22.095Z"
+      },
+      {
+        "_id": "687e3536e01f5580658d499f",
+        "title": "Arvin AI Logo Maker",
+        "siteUrl": "https://arvin.chat/feature/ai-logo-designer",
+        "tags": [
+          "🌟",
+          "ai",
+          "logos",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:22.168Z"
+      },
+      {
+        "_id": "687e3536e01f5580658d49a1",
+        "title": "Resyfy AI",
+        "siteUrl": "https://resyfy.ai/",
+        "tags": [
+          "💼",
+          "ai",
+          "career",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:22.243Z"
+      },
+      {
+        "_id": "687e3536e01f5580658d49a3",
+        "title": "SpicyGen AI",
+        "siteUrl": "https://spicygen.ai/",
+        "tags": [
+          "🎬",
+          "ai",
+          "animation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:22.314Z"
+      },
+      {
+        "_id": "687e3536e01f5580658d49a5",
+        "title": "Blox Fruits Values",
+        "siteUrl": "https://bloxfruitsvalues.io/",
+        "tags": [
+          "🎮",
+          "ai",
+          "gaming",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:22.401Z"
+      },
+      {
+        "_id": "687e3536e01f5580658d49a7",
+        "title": "ClawCloud Run",
+        "siteUrl": "https://run.claw.cloud/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:22.483Z"
+      },
+      {
+        "_id": "687e3536e01f5580658d49a9",
+        "title": "Ant Directory",
+        "siteUrl": "https://antdirectory.com/",
+        "tags": [
+          "👍",
+          "ai",
+          "productivity",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:22.581Z"
+      },
+      {
+        "_id": "687e3536e01f5580658d49ab",
+        "title": "videoideas AI",
+        "siteUrl": "https://videoideas.ai/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:22.673Z"
+      },
+      {
+        "_id": "687e3536e01f5580658d49ad",
+        "title": "Chargeblast",
+        "siteUrl": "https://chargeblast.com/",
+        "tags": [
+          "💰",
+          "ai",
+          "finance",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:22.774Z"
+      },
+      {
+        "_id": "687e3536e01f5580658d49af",
+        "title": "Free IRS AI Chatbot AI",
+        "siteUrl": "https://bookeeping.ai/en/tools/tax-chat/irs",
+        "tags": [
+          "💰",
+          "ai",
+          "finance",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:22.859Z"
+      },
+      {
+        "_id": "687e3536e01f5580658d49b1",
+        "title": "Erotic AI",
+        "siteUrl": "https://eroticai.chat/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:22.949Z"
+      },
+      {
+        "_id": "687e3537e01f5580658d49b3",
+        "title": "Ecom Design Lab AI",
+        "siteUrl": "https://ecomdesignlab.ai/",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:23.032Z"
+      },
+      {
+        "_id": "687e3537e01f5580658d49b5",
+        "title": "AI undress",
+        "siteUrl": "https://aiundress.io/",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:23.130Z"
+      },
+      {
+        "_id": "687e3537e01f5580658d49b7",
+        "title": "insMind AI Ghibli Filter",
+        "siteUrl": "https://insmind.com/studio-ghibli-filter",
+        "tags": [
+          "🎨",
+          "ai",
+          "art",
+          "generator",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:23.221Z"
+      },
+      {
+        "_id": "687e3537e01f5580658d49b9",
+        "title": "AI Blaze",
+        "siteUrl": "https://blaze.today/study",
+        "tags": [
+          "👍",
+          "ai",
+          "productivity",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:23.315Z"
+      },
+      {
+        "_id": "687e3537e01f5580658d49bb",
+        "title": "AI pose",
+        "siteUrl": "https://aipose.me/",
+        "tags": [
+          "🖼️",
+          "ai",
+          "image",
+          "generator",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:23.413Z"
+      },
+      {
+        "_id": "687e3537e01f5580658d49bd",
+        "title": "xmode AI",
+        "siteUrl": "https://xmode.ai/",
+        "tags": [
+          "📝",
+          "ai",
+          "content",
+          "creation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:23.506Z"
+      },
+      {
+        "_id": "687e3537e01f5580658d49bf",
+        "title": "Vanilla Voice AI",
+        "siteUrl": "https://vanillavoice.ai/",
+        "tags": [
+          "🙋‍♀️",
+          "ai",
+          "customer",
+          "support",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:23.585Z"
+      },
+      {
+        "_id": "687e3537e01f5580658d49c1",
+        "title": "All Voice Lab",
+        "siteUrl": "https://allvoicelab.com/",
+        "tags": [
+          "🔊",
+          "ai",
+          "text",
+          "to",
+          "speech",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:23.678Z"
+      },
+      {
+        "_id": "687e3537e01f5580658d49c3",
+        "title": "Aisento",
+        "siteUrl": "https://aisento.com/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:23.768Z"
+      },
+      {
+        "_id": "687e3537e01f5580658d49c5",
+        "title": "AssetRoom",
+        "siteUrl": "https://assetroom.net/",
+        "tags": [
+          "💰",
+          "ai",
+          "finance",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:23.853Z"
+      },
+      {
+        "_id": "687e3537e01f5580658d49c7",
+        "title": "Cool Coloring Pages",
+        "siteUrl": "https://coolcoloringpages.com/",
+        "tags": [
+          "🎨",
+          "ai",
+          "art",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:23.945Z"
+      },
+      {
+        "_id": "687e3538e01f5580658d49c9",
+        "title": "Cloudairy AI",
+        "siteUrl": "https://cloudairy.com/",
+        "tags": [
+          "👍",
+          "ai",
+          "productivity",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:24.034Z"
+      },
+      {
+        "_id": "687e3538e01f5580658d49cb",
+        "title": "AI Submit Directories",
+        "siteUrl": "https://submitdirs.com/",
+        "tags": [
+          "💻",
+          "ai",
+          "seo",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:24.128Z"
+      },
+      {
+        "_id": "687e3538e01f5580658d49cd",
+        "title": "Overchat AI",
+        "siteUrl": "https://overchat.ai/",
+        "tags": [
+          "💬",
+          "ai",
+          "chatbot",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:24.211Z"
+      },
+      {
+        "_id": "687e3538e01f5580658d49cf",
+        "title": "DRTy Bot",
+        "siteUrl": "https://drt.fm/",
+        "tags": [
+          "💬",
+          "ai",
+          "chatbot",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:24.299Z"
+      },
+      {
+        "_id": "687e3538e01f5580658d49d1",
+        "title": "My spicy vanilla",
+        "siteUrl": "https://myspicyvanilla.com/",
+        "tags": [
+          "🎭",
+          "entertainment",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:24.395Z"
+      },
+      {
+        "_id": "687e3538e01f5580658d49d3",
+        "title": "AI Agent Store AI",
+        "siteUrl": "https://aiagentstore.ai/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:24.477Z"
+      },
+      {
+        "_id": "687e3538e01f5580658d49d5",
+        "title": "Anyfans AI",
+        "siteUrl": "https://anyfans.ai/",
+        "tags": [
+          "ai",
+          "dating",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:24.705Z"
+      },
+      {
+        "_id": "687e3538e01f5580658d49d7",
+        "title": "OneSky Localization Agent AI",
+        "siteUrl": "https://onesky.ai/",
+        "tags": [
+          "🌍",
+          "ai",
+          "translation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:24.792Z"
+      },
+      {
+        "_id": "687e3538e01f5580658d49d9",
+        "title": "OctoComics",
+        "siteUrl": "https://octocomics.com/",
+        "tags": [
+          "🤖",
+          "ai",
+          "artificial",
+          "intelligence",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:24.865Z"
+      },
+      {
+        "_id": "687e3538e01f5580658d49db",
+        "title": "Free AI Audio Cleaner Online AI",
+        "siteUrl": "https://audiocleaner.ai/",
+        "tags": [
+          "🔊",
+          "ai",
+          "audio",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:24.953Z"
+      },
+      {
+        "_id": "687e3539e01f5580658d49dd",
+        "title": "Echo Jockey",
+        "siteUrl": "https://echojockey.com/",
+        "tags": [
+          "🎧",
+          "ai",
+          "podcasts",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:25.035Z"
+      },
+      {
+        "_id": "687e3539e01f5580658d49df",
+        "title": "Airshot",
+        "siteUrl": "https://airshot.me/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "generator",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:25.117Z"
+      },
+      {
+        "_id": "687e3539e01f5580658d49e1",
+        "title": "JuicyTalk AI",
+        "siteUrl": "https://juicytalk.ai/",
+        "tags": [
+          "ai",
+          "dating",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:25.427Z"
+      },
+      {
+        "_id": "687e3539e01f5580658d49e3",
+        "title": "AI Cartoon Generator",
+        "siteUrl": "https://neuralframes.com/tools/ai-cartoon-generator",
+        "tags": [
+          "🖼️",
+          "ai",
+          "image",
+          "generator",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:25.508Z"
+      },
+      {
+        "_id": "687e3539e01f5580658d49e5",
+        "title": "Best SAT Score",
+        "siteUrl": "https://bestsatscore.com/",
+        "tags": [
+          "🎓",
+          "ai",
+          "education",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:25.614Z"
+      },
+      {
+        "_id": "687e3539e01f5580658d49e7",
+        "title": "Lara Translate",
+        "siteUrl": "https://laratranslate.com/",
+        "tags": [
+          "🌍",
+          "ai",
+          "translation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:25.706Z"
+      },
+      {
+        "_id": "687e3539e01f5580658d49e9",
+        "title": "DeepSeekV3",
+        "siteUrl": "https://deepseekv3.vip/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:25.788Z"
+      },
+      {
+        "_id": "687e353ae01f5580658d49eb",
+        "title": "AIEasyShot",
+        "siteUrl": "https://aieasyshot.com/",
+        "tags": [
+          "📷",
+          "ai",
+          "photography",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:26.154Z"
+      },
+      {
+        "_id": "687e353ae01f5580658d49ed",
+        "title": "MagicShorts.ai",
+        "siteUrl": "https://magicshorts.ai/",
+        "tags": [
+          "🎥",
+          "ai",
+          "video",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:26.238Z"
+      },
+      {
+        "_id": "687e353ae01f5580658d49ef",
+        "title": "Loudly",
+        "siteUrl": "https://loudly.com/",
+        "tags": [
+          "🎵",
+          "ai",
+          "music",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:26.327Z"
+      },
+      {
+        "_id": "687e353ae01f5580658d49f1",
+        "title": "AI Text Checker",
+        "siteUrl": "https://aitextchecker.pro/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:26.421Z"
+      },
+      {
+        "_id": "687e353ae01f5580658d49f3",
+        "title": "Sexting AI",
+        "siteUrl": "https://sextingai.co/",
+        "tags": [
+          "💬",
+          "ai",
+          "chatbot",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:26.509Z"
+      },
+      {
+        "_id": "687e353ae01f5580658d49f5",
+        "title": "Gud Prompt",
+        "siteUrl": "https://gudprompt.com/",
+        "tags": [
+          "👍",
+          "ai",
+          "productivity",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:26.598Z"
+      },
+      {
+        "_id": "687e353ae01f5580658d49f7",
+        "title": "Gatsbi",
+        "siteUrl": "https://gatsbi.com/",
+        "tags": [
+          "🔬",
+          "ai",
+          "research",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:26.673Z"
+      },
+      {
+        "_id": "687e353ae01f5580658d49f9",
+        "title": "AI NSFW Generator",
+        "siteUrl": "https://ainsfwgenerator.net/",
+        "tags": [
+          "🎨",
+          "ai",
+          "art",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:26.752Z"
+      },
+      {
+        "_id": "687e353ae01f5580658d49fb",
+        "title": "SpicyChat",
+        "siteUrl": "https://spicyai.net/",
+        "tags": [
+          "ai",
+          "dating",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:26.839Z"
+      },
+      {
+        "_id": "687e353ae01f5580658d49fd",
+        "title": "promptchan",
+        "siteUrl": "https://promptchan.com/",
+        "tags": [
+          "🤖",
+          "ai",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:26.922Z"
+      },
+      {
+        "_id": "687e353be01f5580658d49ff",
+        "title": "fellow",
+        "siteUrl": "https://fellow.app/",
+        "tags": [
+          "💼",
+          "ai",
+          "meetings",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:27.034Z"
+      },
+      {
+        "_id": "687e353be01f5580658d4a03",
+        "title": "TemPolor",
+        "siteUrl": "https://tempolor.com/",
+        "tags": [
+          "🎵",
+          "ai",
+          "music",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:27.191Z"
+      },
+      {
+        "_id": "687e353be01f5580658d4a05",
+        "title": "Freefaceswap",
+        "siteUrl": "https://freefaceswap.io/",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:27.270Z"
+      },
+      {
+        "_id": "687e353be01f5580658d4a07",
+        "title": "Postwhale",
+        "siteUrl": "https://postwhale.com/",
+        "tags": [
+          "💻",
+          "ai",
+          "seo",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:27.358Z"
+      },
+      {
+        "_id": "687e353be01f5580658d4a0b",
+        "title": "FallFor AI",
+        "siteUrl": "https://fallfor.ai/",
+        "tags": [
+          "😊",
+          "ai",
+          "chat",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:27.698Z"
+      },
+      {
+        "_id": "687e353be01f5580658d4a0d",
+        "title": "SearchDaddie",
+        "siteUrl": "https://searchdaddie.com/",
+        "tags": [
+          "ai",
+          "adult",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:27.778Z"
+      },
+      {
+        "_id": "687e353be01f5580658d4a0f",
+        "title": "AIEASE - AI Photo Editor AI",
+        "siteUrl": "https://aiease.ai/",
+        "tags": [
+          "🖌️",
+          "ai",
+          "image",
+          "editing",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:27.851Z"
+      },
+      {
+        "_id": "687e353be01f5580658d4a11",
+        "title": "Humanize AI",
+        "siteUrl": "https://humanizeai.tools/",
+        "tags": [
+          "📝",
+          "ai",
+          "content",
+          "creation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:27.949Z"
+      },
+      {
+        "_id": "687e353ce01f5580658d4a13",
+        "title": "Chat2Blog",
+        "siteUrl": "https://katrank.com/chat2blogai",
+        "tags": [
+          "📝",
+          "ai",
+          "content",
+          "creation",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:28.041Z"
+      },
+      {
+        "_id": "687e353ce01f5580658d4a15",
+        "title": "Micro Culture Lite",
+        "siteUrl": "https://mculture.xyz/lite-for-single-users",
+        "tags": [
+          "😊",
+          "ai",
+          "communication",
+          "tools"
+        ],
+        "featured": false,
+        "createdAt": "2025-07-21T12:40:28.139Z"
+      },
+      {
+        "_id": "687e353de01f5580658d4a35",
+        "title": "Integra Global Solutions",
+        "siteUrl": "https://globalintegra.co.uk/",
+        "tags": [
+          "ai",
+          "analytics",
+          "tools"
+        ],
+        "featured": false,
+        "isFree": true,
+        "createdAt": "2025-07-21T12:40:29.963Z"
+      }
+    ],
+    "pending": [
+      {
+        "_id": "687fe6a5caf7aa3b8abb0bad",
+        "title": "Test Pending Tool",
+        "siteUrl": "https://test.com",
+        "tags": [
+          "testing"
+        ],
+        "status": "approved",
+        "featured": false,
+        "createdAt": "2025-07-22T19:29:41.370Z",
+        "submittedAt": "2025-07-22T19:29:41.359Z"
+      },
+      {
+        "_id": "687fe790476838abd911f151",
+        "title": "Solaris UI",
+        "siteUrl": "https://solarisui.com",
+        "tags": [
+          "ui",
+          "react",
+          "frontend"
+        ],
+        "status": "pending",
+        "featured": false,
+        "createdAt": "2025-07-22T19:33:36.162Z",
+        "submittedAt": "2025-07-22T19:33:36.152Z"
+      }
+    ]
+  }
+}
