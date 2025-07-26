@@ -20,9 +20,10 @@ interface ShareToolDialogProps {
 export function ShareToolDialog({ open, onOpenChange, tool }: ShareToolDialogProps) {
   const [copied, setCopied] = useState(false)
   const { toast } = useToast()
+  const d = tool.description;
   
   const currentUrl = typeof window !== 'undefined' ? window.location.href : ''
-  const shareText = `Check out ${tool.title} - ${tool.description}`
+  const shareText = `Check out ${tool.title} - ${d.length > 155 ? `${d.slice(0, 155)}...` : d}`
   const fullShareText = `${shareText} ${currentUrl}`
 
   const copyToClipboard = async () => {
