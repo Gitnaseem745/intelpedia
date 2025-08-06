@@ -1,7 +1,29 @@
 {
   "name": "intelpedia",
   "version": "1.0.0",
-  "private": true,
+  "description": "AI Tools Directory & Innovation Hub - A comprehensive platform for discovering and sharing AI tools",
+  "author": "IntelPedia Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gitnaseem745/intelpedia.git"
+  },
+  "homepage": "https://intelpedia.tech",
+  "bugs": {
+    "url": "https://github.com/Gitnaseem745/intelpedia/issues"
+  },
+  "keywords": [
+    "ai-tools",
+    "artificial-intelligence",
+    "nextjs",
+    "typescript",
+    "mongodb",
+    "directory",
+    "tools",
+    "innovation",
+    "open-source"
+  ],
+  "private": false,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

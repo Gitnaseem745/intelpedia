@@ -135,23 +135,23 @@ npm i --legacy-peer-deps
 
 ### 2. Environment Setup
 
-Copy the environment file and configure variables:
+Copy the environment template and configure your variables:
 
 ```bash
 cp .env.example .env.local
 ```
 
-Required environment variables:
+Configure the following required environment variables in `.env.local`:
 
 ```env
-# Database
-MONGODB_URI=mongodb://localhost:27017/intelpedia
+# Database (Required)
+MONGODB_URI=your_mongodb_connection_string
 
-# Wisp CMS (for blog)
+# Wisp CMS (Required for blog functionality)
 NEXT_PUBLIC_BLOG_ID=your_wisp_blog_id
 
-# Authentication
-ADMIN_PASSWORD=your_secure_admin_password
+# Admin Authentication (Required)
+ADMIN_PASSWORD=your_bcrypt_hashed_password
 JWT_SECRET=your_jwt_secret_key
 
 # Site Configuration
@@ -159,10 +159,18 @@ NEXT_PUBLIC_BASE_URL=http://localhost:3000
 NEXT_PUBLIC_BLOG_DISPLAY_NAME=IntelPedia
 NEXT_PUBLIC_BLOG_DESCRIPTION=Your AI Tools & Innovation Hub
 
-# Image & OG Generation
-OG_IMAGE_SECRET=your_og_image_secret
+# Optional: Analytics
+NEXT_PUBLIC_GA_ID=your_google_analytics_id
+
+# Optional: GitHub Integration (for image uploads)
+GITHUB_TOKEN=your_github_personal_access_token
+
+# Optional: Additional secrets
 REVALIDATION_SECRET=your_revalidation_secret
+OG_IMAGE_SECRET=your_og_image_secret
 ```
+
+> **⚠️ Security Note**: Never commit `.env.local` to version control. All secrets should be configured in your deployment environment.
 
 ### 3. Database Setup
 
@@ -353,14 +361,14 @@ Creator, Full-Stack Developer | 2024 – Present
 - Optimized for Core Web Vitals with server components, image optimization, and advanced caching strategies.
 - **Website**: [intelpedia.tech](https://intelpedia.tech)
 - **Tools Directory**: [intelpedia.tech/tools](https://intelpedia.tech/tools)
-- **GitHub**: [github.com/Gitnaseem745/wisp-nextjs-blog](https://github.com/Gitnaseem745/wisp-nextjs-blog)
+- **GitHub**: [github.com/Gitnaseem745/intelpedia](https://github.com/Gitnaseem745/intelpedia)
 
 ## �🙋‍♂️ Support & Contact
 
 - **Creator**: [Naseem](https://github.com/Gitnaseem745)
 - **Website**: [intelpedia.tech](https://intelpedia.tech)
-- **Issues**: [GitHub Issues](https://github.com/Gitnaseem745/wisp-nextjs-blog/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/Gitnaseem745/wisp-nextjs-blog/discussions)
+- **Issues**: [GitHub Issues](https://github.com/Gitnaseem745/intelpedia/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Gitnaseem745/intelpedia/discussions)
 
 ## 🌟 Acknowledgments
 

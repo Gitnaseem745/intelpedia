@@ -43,9 +43,15 @@ A comprehensive admin dashboard for managing tools on your site. Built with Next
 
 ## 🔐 Authentication
 
-Currently uses a simple password-based authentication (`admin123`) stored in localStorage.
+Uses secure password-based authentication with bcrypt hashing. Admin password is configured via environment variables.
 
-**⚠️ Important**: Replace with proper authentication in production (JWT, OAuth, etc.)
+**Environment Setup**: Set your admin password in `.env.local`:
+```bash
+ADMIN_PASSWORD=your_bcrypt_hashed_password_here
+JWT_SECRET=your_jwt_secret_key_here
+```
+
+**⚠️ Important**: Use strong passwords and keep JWT secrets secure in production.
 
 ## 🎨 Design
 
@@ -78,7 +84,7 @@ Currently uses a simple password-based authentication (`admin123`) stored in loc
 
 2. Navigate to `/admin` (redirects to `/admin/tools`)
 
-3. Use password: `admin123` to access the dashboard
+3. Enter your configured admin password to access the dashboard
 
 ## 🛠️ Development Notes
 

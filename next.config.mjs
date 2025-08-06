@@ -6,7 +6,7 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "cdn.jsdelivr.net",
                 port: "",
-                pathname: "/gh/Gitnaseem745/ai-tools-imgs/**",
+                pathname: "/gh/Gitnaseem745/intelpedia-images/**",
             },
             {
                 protocol: "https",
